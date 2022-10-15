@@ -37,7 +37,7 @@ const [searchValue, setSearchValue] = React.useState('');
 <h1>All</h1>
 <div className='search-block'>
 <i class="fa-solid fa-search"></i>
-<input onChange={onChangeSearvhInput} placeholder='Поик...'></input>
+<input laceholder='Поик...'></input>
 </div>
 </div>
 <div className="cardAll">

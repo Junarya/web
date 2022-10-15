@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCartShopping} from "@fortawesome/free-solid-svg-icons";
+import {faGhost} from "@fortawesome/free-solid-svg-icons";
 import {faPerson} from "@fortawesome/free-solid-svg-icons";
 
 
@@ -17,8 +17,8 @@ function Header(props){
       
        <ul className="headeRight">
         <li className="icon" onClick={props.onClickCard}>
-           <FontAwesomeIcon  className="icon1"  icon={faCartShopping } />
-          <span>1256</span>
+           <FontAwesomeIcon  className="icon1"  icon={faGhost } />
+          <span>fddf</span>
         </li>
         <li>  
         <FontAwesomeIcon icon={faPerson} /> </li>
