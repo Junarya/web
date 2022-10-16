@@ -11,7 +11,7 @@ function Header(props){
                   <div className="headerLeft"  >
                   <img src="http://placekitten.com/g/40/40" alt="1.jpg"></img>
                   <div className="headerInfo">
-                    <h3 >Lorem, ipsum.</h3>
+                    <h3 >Logo</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
                   </div>
                   </div>    
