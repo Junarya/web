@@ -8,14 +8,11 @@ import Next from './component/Next'
 import { Routes, Route, Link } from 'react-router-dom' 
 
 const arr=[
-  {name: 'Lorem ipsum dolor sit', price: 15251 , imageUrl: "http://placekitten.com/g/123/112"},
-  {name: 'adipisicing elit. ', price: 135571,  imageUrl: "http://placekitten.com/g/128/122"},
-  {name: 'Lorem ipsum dolor ', price: 124251, imageUrl: "http://placekitten.com/g/123/112"},
-  {name: 'adipisic dolore?cv', price: 1255571,  imageUrl: "http://placekitten.com/g/128/112"},
-  {name: 'Lorem ipsum dolor sit', price: 15251 , imageUrl: "http://placekitten.com/g/123/112"},
-  {name: 'adipisicing elit. ', price: 135571,  imageUrl: "http://placekitten.com/g/128/122"},
-  {name: 'Lorem ipsum dolor ', price: 124251, imageUrl: "http://placekitten.com/g/123/112"},
-  {name: 'adipisic dolore?cv', price: 1255571,  imageUrl: "http://placekitten.com/g/128/112"},
+  {name: 'Lorem ipsum dolor sit', price1: 263 , price2: 283 , imageUrl: "http://placekitten.com/g/279/195"},
+  {name: 'Lorem ipsum dolor sit', price1: 263 , price2: 283 , imageUrl: "http://placekitten.com/g/279/195"},
+  {name: 'Lorem ipsum dolor sit', price1: 263 , price2: 283 , imageUrl: "http://placekitten.com/g/279/195"},
+  {name: 'Lorem ipsum dolor sit', price1: 263 , price2: 283 , imageUrl: "http://placekitten.com/g/279/195"},
+  {name: 'Lorem ipsum dolor sit', price1: 263 , price2: 283 , imageUrl: "http://placekitten.com/g/279/195"},
 ]
 function App(){
 
@@ -35,10 +32,6 @@ return(
         <Route path="/next" element={<Next />} exact />
       </Routes>
 
-<div className='search-block'>
-<i class="fa-solid fa-search"></i>
-<input laceholder='Поик...'></input>
-</div>
 
 </div>
 <div className="cardAll">
@@ -47,7 +40,8 @@ return(
         <Route path="/" element={arr.map((obj) => (
 <Card 
   name={obj.name}
-  price = {obj.price}
+  price1 = {obj.price1}
+  price2= {obj.price2}
   imageUrl = {obj.imageUrl}
  
 />

@@ -13,18 +13,18 @@ const OnClickPlus = () =>{
  
 return(
 <div className="card"> 
-    <img src={props.imageUrl} alt="1.jpg"></img>
-        <p>{props.name}</p>
+    <img className='imgCard' src={props.imageUrl} alt="1.jpg"></img>
+        <p>{props.name}</p>500 мл/700 мл
             <div className='infoCard'>
-            <p>Цена: </p>
-            <p>{props.price} dfd</p>
+            <div className="CardPrice">
+                        {props.price1}P/{props.price2}P
+            </div>
             
-            
-            {/* тут была кнопка*/ }
+            {/* тут была кнопка 
              
             <img onClick = {OnClickPlus}  className= "plus"  src= {isAdded ? "http://placekitten.com/g/20/50" : "http://placekitten.com/g/50/20" }     alt="1"></img>
 
-
+*/}
             </div>
 </div>);}
 
