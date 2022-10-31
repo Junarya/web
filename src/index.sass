@@ -45,7 +45,13 @@ header
     margin-left: 5px
 
 
+.logoName
+    width: 180px
+    height: 55px
 
+.imgName
+  width: 78px
+  height: 79px
 
 .icon:hover
   transition: 0.2s
@@ -98,23 +104,70 @@ header
 .content
   h1
     margin: 0
-  padding: 40px 30px
+  padding: 40px 282px
+  background-color: #FFFFFF
+ 
 
+.menuCardUpper
+    background-color: #F5F4F2
+    position: absolute
+    left: 0
+    right: 0
+
+    
+
+
+.cardAll
+  display:  flex
+  flex-wrap: wrap
+  max-width: 1362px
+  padding-left: 280px
+  justify-content: space-between
+  
+
+
+.titleMenuBlock
+  font-family: 'Russo One', sans-serif
+  font-size: 40px
+  padding-left: 280px
+  margin: 65px 0px 61px 12px
+  text-transform: uppercase
+ 
+
+.titleMenuBlock:after
+    content: ""
+    display: block
+    max-width: 363px
+    height: 3px
+    background-color: #000000
 
 .card
+  font-family: 'Montserrat Alternates', sans-serif
   padding: 20px
   max-width: 325px
   max-height: 454px
-  margin-bottom: 30px
-  border-radius: 40px
-  margin-right: 30px
+  margin-bottom: 36px
+  border-radius: 30px
+
   box-shadow: (0px 0px 10px rgba(0, 0, 0, 0.25))
+    
+.nameCard
+  font-size: 26px
+  padding-top: 21px
+  padding-bottom: 24px
+  word-wrap: break-word
+  overflow-wrap: break-word
+  max-width: 275px
+  
+
+ 
+.vCard
+  font-size: 16px
+  padding-bottom: 15px
 
 .imgCard
   height: 195px
   width: 279px
-  left: 23px
-  top: 30px
   border-radius: 30px
 
 .infoCard
@@ -124,6 +177,8 @@ header
   background-color: #F4DDD3
   cursor: pointer
   transition: 0.5s
+  
+
 
 
 .CardPrice
@@ -132,14 +187,14 @@ header
   padding-top: 15px
   font-size: 25px
   font-weight: bold
+  
 
 .infoCard:hover
   background-color: #a57763
 
 
 
-
-
+ 
 
 .button, .btn
   background: #dddbdb
@@ -158,26 +213,152 @@ header
 .button:hover, .btn:hover
   background: #7c7373
 
-.cardAll
-  display:  flex
-  flex-wrap: wrap
+
+
+
+ 
+.drawer
+  color: black
+  width: 1000px
+  height: 500px
+  background-color: white
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1)
+  position: absolute
+
+.cartItems
+  position: relative
+  display: flex
+  justify-content: space-between
+  margin: 100px 100px
+
+.btnPopUp
+  color: purple
+  height: 35px
+  width: 40px
+  border: none
+  margin-left: 70px
+  border-radius: 30px
+  font-size: 30px
+  transition:    transform .8s ease-in-out
+  background: transparent
+  cursor: pointer
  
 
+.btnPopUp:hover
+  transform: rotate(90deg)
+
+.imgPopUp
+    display: block
+    width: 100%
+    height: auto
+
+.textPopUp
+    width: 50% 
+    margin: 0 65px
+ 
+  
+
+.btnMenu, .btnMenuActive
+    display: inline-block
+    vertical-align: top
+    padding: 15px 31px
+    font-size: 30px
+    margin-right: 18px
+    border: none
+    background-color: #FFFFFF
+    color: black
+    text-transform: uppercase
+    text-decoration: none
+    font-family: 'Montserrat', sans-serif
+    transition: background .1s linear, color .1s linear
+    cursor: pointer
+    
+.btnMenuActive
+       background-color: #70715A
+       color: white
+       font-weight: 700
+       font-style: bold
+
+.btnMenu:hover 
+    color: black
+    background-color: #C6C6BD
+
+.fruitMenu
+  display: block
 
 
-.drawer
-  position: absolute
-  width: 385px
-  height: 100%
-  right: 0
-  background: #fff
-  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1)
 
-.overlay
-  position: absolute
-  left: 0
-  top: 0
-  background-color: rgba(0, 0, 0, 0.5) 
-  z-index: 1
-  width: 100%
-  height: 100%
+
+.sliderMenu
+  margin-left: 18px
+
+.sliderMenu:after
+    content: ""
+    margin-left: -18px
+    display: block
+    width: 100%
+    height: 3px
+    background-color: #000000
+   
+
+.infoMenu
+  width: 1360px
+  height: 323px
+  background-color: #F4EEE8
+  border-radius: 88px
+  margin-bottom: 100px
+  font-family: 'Montserrat Alternates', sans-serif
+  padding-right: 10px
+
+
+
+  
+  
+  
+.infoMenuCard1, .infoMenuCard2, .infoMenuCard3
+  display: inline-table
+  margin-top: 25px
+
+
+
+.infoMenuCard1
+  width: 328px
+  padding-left: 100px
+  margin-right: 70px
+
+.infoMenuCard2
+  width: 404px
+  margin-right: 103px
+
+.infoMenuCard3
+  width: 243px
+  padding-right: 94px
+
+
+
+.titleMenu
+  font-size: 24px
+  bottom: 22px
+
+.intoMenu
+  font-size: 20px
+  display: block
+  padding-top: 20px
+
+.imgTextCard 
+  display: inline-flex
+
+.imgCardMenu
+  padding-top: 16px
+  padding-right: 24px
+
+.titleMenuCard
+    text-align: center
+    font-family: 'Russo One', sans-serif
+    font-size: 50px
+    margin-left: 573px
+    width: 211px
+    height: 61px
+    background-color: #D4D8B8
+    margin-bottom: 36px
+

@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom'  /*    Link - обычная ссылка как тег a*/
-
+ 
+import { Routes, Route, Link } from 'react-router-dom' 
+import Menu from './Menu/Menu'
 
 function Header(props){
   return(
     <header>
+      
       <Link className='link' to = "/"> {/*   /  - переход на главную страницу*/ }
         <div className="headerLeft"  >
-          <img src="http://placekitten.com/g/78/79" alt="1.jpg"></img>
-          <div className="headerInfo">
-            <h3 >Wahaha</h3>
-          </div>
+        <img className='imgName' src={require('./img/logo.png')} alt="logo.jpg" />
+        <img className='logoName' src={require('./img/name.png')} alt="name.jpg" />
         </div> 
       </Link>
       <ul className="headeRight">
@@ -28,11 +28,16 @@ function Header(props){
             </div>
           </li>
         </Link>
-        <Link className='link' to = "/next">
+
+
+        
+        <Link className='link' to = "/menu"> 
           <li className="icon" /*onClick={props.onClickCard}*/>
             Меню
           </li>
         </Link>
+
+
 
         <Link className='link' to = "/">
           <li className="icon" /*onClick={props.onClickCard}*/>
