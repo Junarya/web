@@ -1,0 +1,60 @@
+// Взято из CSS фреймворка Skeleton-Sass
+// https://github.com/WhatsNewSaes/Skeleton-Sass/blob/master/scss/base/_functions.scss
+//
+$total-columns: 12                  // всего столбоцов 
+$column-width: 95px             // ширина одного столбца 
+$column-margin: 20px                 // расстояние между столбцами
+
+// Функция расчитывает размер столбца 
+// $n - номер столбца 
+@function grid-column-width($n) 
+  // расчитываем размер столбца и вычитаем отступы
+  @return $column-width * $n + $column-margin*($n - 1)
+// -------------------------
+//Пример вызова функции grid-column-width():
+// -------------------------
+.col1         
+    width: grid-column-width(1)
+    
+
+.col2         
+    width: grid-column-width(2) 
+    
+
+.col3       
+    width: grid-column-width(3) 
+    
+
+.col4      
+     width: grid-column-width(4) 
+     
+.col5        
+     width: grid-column-width(5) 
+     
+.col6        
+    width: grid-column-width(6) 
+    
+.col7       
+    width: grid-column-width(7) 
+    
+.col8       
+    width: grid-column-width(8) 
+    
+.col9         
+    width: grid-column-width(9) 
+    
+.col10       
+    width: grid-column-width(10)
+    
+.col11      
+    width: grid-column-width(11)
+    
+.col12
+    width: grid-column-width(12)
+    
+@for $i from 1 through 12
+    .col#{$i}  
+         margin: 0 $column-margin/2
+             
+        
+   
