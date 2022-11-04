@@ -1,0 +1,303 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Montserrat:wght@400;700&family=Russo+One&display=swap");
+p {
+  margin: 0;
+}
+
+.container {
+  margin: auto;
+  max-width: 1380px;
+}
+
+.Montserrat_A {
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.Montserrat {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.line {
+  margin: 30px;
+  line-height: 140.4%;
+}
+
+h1 {
+  font-family: "Russo One", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.back_img {
+  width: 100%;
+}
+
+.head {
+  display: flex;
+  background-image: url("./component/img/main/dasha_background.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3% 0;
+}
+
+.logo {
+  max-height: 100%;
+  max-width: 30%;
+}
+
+.drink {
+  margin: 0 1%;
+  max-width: 32%;
+}
+
+.block-cent {
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  height: 110px;
+}
+
+.headline {
+  display: inline-block;
+  background-color: #D4D8B8;
+  margin: 70px auto;
+  padding: 0 14px;
+}
+
+.o_nas_inside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.flex_img {
+  display: flex;
+  flex-direction: column;
+}
+
+.o_nas_img {
+  display: flex;
+  align-items: center;
+}
+
+.o_nas_text {
+  background-color: #F4DDD3;
+  max-width: 900px;
+}
+
+.immg {
+  margin: 5px 0;
+}
+
+.tagline {
+  background: #D4D8B8;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottle1 {
+  display: flex;
+  justify-content: center;
+}
+
+.transform {
+  transform: scale(-1, 1);
+}
+
+.font30 {
+  font-size: 30px;
+}
+
+.border {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px 0px;
+  margin: 33px 0;
+  padding: 27px 0;
+}
+
+.ingridients {
+  background-color: #F4EEE8;
+  padding: 100px 0;
+}
+
+.ingridients_text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.ingridients_text_param {
+  margin: 18px 0;
+}
+
+.ingridients_text_all {
+  margin: 0 10px;
+}
+
+.ingridients_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statistica {
+  background: url("./component/img/main/leaf.svg");
+  background-repeat: no-repeat;
+  padding: 60px 0;
+  background-position: center;
+}
+
+.leaf {
+  margin-right: 20px;
+  width: 94px;
+}
+
+.stat_flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.list {
+  line-height: 207.9%;
+  background-color: #D4D8B8;
+}
+
+li::marker {
+  content: "  ✔  ";
+}
+
+.my_imeem {
+  background-color: #F4DDD3;
+  text-align: center;
+  margin: 48px 0;
+  padding: 10px 0;
+}
+
+.menu_block {
+  background-color: #F4EEE8;
+  border-radius: 98px;
+  display: flex;
+  margin-top: 22px;
+}
+
+.menu_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 46px;
+  padding-bottom: 24px;
+}
+
+.menu_btn {
+  margin-top: 50px;
+  padding: 29px 67px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #383838;
+  color: #fff;
+  transition: 0.2s;
+}
+.menu_btn:hover {
+  color: #383838;
+  background-color: #F4DDD3;
+}
+.menu_btn:active {
+  background-color: #dfbbaa;
+  color: #000;
+  transform: translateY(4px);
+}
+
+.contacts_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 120px;
+  margin-top: 15px;
+}
+
+.bg-Vector {
+  width: 40px;
+  height: 25px;
+  background: url("./component/img/css_sprites.png") -67px -168px;
+  margin-right: 20px;
+}
+
+.bg-Path_3 {
+  width: 37px;
+  height: 28px;
+  background: url("./component/img/css_sprites.png") -10px -168px;
+  margin-right: 20px;
+}
+
+.bg-Vector2 {
+  width: 37px;
+  height: 33px;
+  background: url("./component/img/css_sprites.png") -146px -100px;
+  margin-right: 20px;
+}
+
+.bg-Vector3 {
+  min-width: 59px;
+  height: 70px;
+  background: url("./component/img/css_sprites.png") -10px -10px;
+}
+
+.soc_link {
+  display: flex;
+  margin: 35px 0;
+}
+.soc_link:first-of-type {
+  margin-top: 0;
+}
+.soc_link:last-of-type {
+  margin-bottom: 0;
+}
+
+.adress1, .adress2 {
+  display: flex;
+  align-items: center;
+}
+
+.adress1 {
+  margin-bottom: 40px;
+}
+
+.adres_link p {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.adres_link p:last-of-type {
+  margin-bottom: 0;
+}
+
+.map {
+  margin: 0 10px;
+}/*# sourceMappingURL=dasha_style.css.map */
