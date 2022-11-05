@@ -14,11 +14,11 @@ function App() {
   const [cartOpened, setCartOpened] = React.useState(false);
 
   return (
-    <div className="wrapper">
+    <div /*className="wrapper"*/>
       {cartOpened && <PopUp onClose={() => setCartOpened(false)} />}
-
-      <Header onClickCard={() => setCartOpened(true)} />
-
+      <div /*className="container"*/>
+        <Header onClickCard={() => setCartOpened(true)} />
+      </div>
       <div>
         <div>
           <Routes>
