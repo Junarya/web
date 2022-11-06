@@ -25,11 +25,11 @@ function App() {
           <Routes>
             {" "}
             {/*  Ссылки на другие страницы */}
+            <Route path="/" element={<Main />} />
             <Route path="/menu" element={<Menu />} exact />
           </Routes>
         </div>
       </div>
-      <Main></Main>
     </div>
   );
 }
