@@ -8,6 +8,11 @@
   padding-top: 110px;
 }
 
+.menu_btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .header_background {
   position: fixed;
   width: 100%;
@@ -232,6 +237,14 @@ li::marker {
   padding-bottom: 24px;
 }
 
+.PageActive {
+  font-weight: bold;
+}
+
+.PageNotActive {
+  font-weight: normal;
+}
+
 .menu_btn {
   margin-top: 50px;
   padding: 29px 67px;
@@ -243,8 +256,10 @@ li::marker {
   transition: 0.2s;
 }
 .menu_btn:hover {
-  color: #383838;
   background-color: #F4DDD3;
+}
+.menu_btn:hover p {
+  color: #383838;
 }
 .menu_btn:active {
   background-color: #dfbbaa;

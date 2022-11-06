@@ -139,7 +139,7 @@ function Main(props) {
           </div>
         </div>
       </div>
-      <div className="menu">
+      <div className="menu_dasha">
         <div className="block-cent">
           <div className="headline">
             <h1>НАШИ НАПИТКИ</h1>
@@ -152,11 +152,7 @@ function Main(props) {
         </div>
         <div className="menu_block Montserrat_A container">
           <div className="col3 menu_img">
-            <img
-              classNameName="boba_menu_img"
-              src="http://placekitten.com/g/1360/455"
-              alt=""
-            />
+            <img classNameName="boba_menu_img" src="" alt="" />
             <p>Фруктовые чаи</p>
           </div>
           <div className="col3 menu_img">
@@ -173,9 +169,15 @@ function Main(props) {
           </div>
         </div>
         <div className="block-cent">
-          <button type="button" action="#" className="menu_btn Montserrat">
-            <Link>Меню</Link>
-          </button>
+          <Link to="/menu">
+            <button
+              type="button"
+              action="/menu"
+              className="menu_btn Montserrat"
+            >
+              <p>Меню</p>
+            </button>
+          </Link>
         </div>
       </div>
       <div className="contacts">

@@ -1,7 +1,24 @@
 import { Routes, Route, Link } from "react-router-dom";
 import Menu from "./Menu/Menu";
+import React from "react";
 
 function Header(props) {
+  /*  this.state = {
+    selected: null
+  };
+
+
+onClickItem (item) {
+  this.setState({
+    selected: item
+  })
+}*/
+  const LinkNames = ["Главная", "Меню", "О нас"];
+  const [activePage, setActivePage] = React.useState(0);
+  const onClickHeader = (index) => {
+    setActivePage(index);
+  };
+
   return (
     <div className="header_background">
       <header className="container">
@@ -24,7 +41,14 @@ function Header(props) {
         <ul className="headeRight">
           <Link className="link" to="/">
             <li className="icon" /*onClick={props.onClickCard}*/>
-              Главная
+              {
+                <p
+                  onClick={() => onClickHeader(0)}
+                  className={activePage == 0 ? "PageActive" : "PageNotActive"}
+                >
+                  {LinkNames[0]}
+                </p>
+              }
               <div className="icon_down">
                 <i class="fa-solid fa-chevron-down "></i>
               </div>
@@ -51,11 +75,25 @@ function Header(props) {
           </Link>
 
           <Link className="link" to="/menu">
-            <li className="icon" /*onClick={props.onClickCard}*/>Меню</li>
+            <li className="icon" /*onClick={props.onClickCard}*/>
+              <p
+                onClick={() => onClickHeader(1)}
+                className={activePage == 1 ? "PageActive" : "PageNotActive"}
+              >
+                {LinkNames[1]}
+              </p>
+            </li>
           </Link>
 
           <Link className="link" to="/">
-            <li className="icon" /*onClick={props.onClickCard}*/>FAQ</li>
+            <li className="icon" /*onClick={props.onClickCard}*/>
+              <p
+                onClick={() => onClickHeader(2)}
+                className={activePage == 2 ? "PageActive" : "PageNotActive"}
+              >
+                {LinkNames[2]}
+              </p>
+            </li>
           </Link>
         </ul>
       </header>

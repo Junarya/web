@@ -10,6 +10,10 @@ $black: #383838
 .content_dasha
     padding-top: 110px   
 
+.menu_btn a
+    color: #fff
+    text-decoration: none
+
 .header_background
     //1 вариант, проверим, когда все будет готово
     //  position: sticky
@@ -203,7 +207,10 @@ li::marker
     align-items: center
     padding-top: 46px
     padding-bottom: 24px
-
+.PageActive
+    font-weight: bold
+.PageNotActive
+    font-weight: normal
 .menu_btn
     margin-top: 50px
     padding: 29px 67px
@@ -215,8 +222,9 @@ li::marker
     transition: 0.2s
 
     &:hover
-        color: $black
         background-color: $pink
+        p
+            color: $black
 
     &:active
         background-color: #dfbbaa 
