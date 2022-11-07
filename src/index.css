@@ -21,6 +21,7 @@ header {
   padding: 15px 0 15px 30px;
   font-family: "Montserrat", sans-serif;
   font-size: 22px;
+  align-items: center;
 }
 header img {
   margin-right: 15px;
@@ -33,7 +34,6 @@ header .headerLeft {
   align-items: center;
 }
 header li, header ul, header .icon_down {
-  margin-top: 30px;
   list-style-type: none;
   display: inline;
 }
@@ -60,26 +60,7 @@ header .icon_down {
 }
 
 .icon:hover {
-  transition: 0.2s;
-}
-.icon:hover .menu {
-  display: block;
-}
-
-.menu_hidden {
-  justify-content: none;
-  position: relative;
-  bottom: 28px;
-  display: inline-block;
-}
-
-.menu {
-  position: absolute;
-  list-style-type: none;
-  padding-left: 0px;
-  left: -100px;
-  display: none;
-  cursor: pointer;
+  transition: 0.15s;
 }
 
 .menu_link {
@@ -358,8 +339,20 @@ header .icon_down {
   margin-bottom: 36px;
 }
 
+.top_menu {
+  display: inline-block;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.top_menu > li {
+  display: inline-block;
+  position: relative;
+}
+
 .top_menu > li > a {
-  padding: 10px 20px;
+  display: inline-block;
   color: inherit;
   text-decoration: none;
   transition: background-color 0.25s, color 0.15s;
@@ -367,11 +360,24 @@ header .icon_down {
 
 .top_menu > li:hover > ul a {
   opacity: 1;
+  height: 30px;
+  padding: 10px;
+  transition: height 0.3s, opacity 0.4s;
 }
 
 .top_menu > li:hover > ul li {
   height: 40px;
   opacity: 1;
+}
+
+.inner_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  margin: 0;
 }
 
 .inner_menu > li {
@@ -382,11 +388,15 @@ header .icon_down {
 
 .inner_menu > li > a {
   width: 100%;
-  padding: 10px 20px;
-  color: inherit;
   text-decoration: none;
-  height: inherit;
   overflow: hidden;
   opacity: 0;
   transition: height 0.4s, opacity 0.5s;
+}
+
+.top_menu > li > ul a {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  transition: height 0.3s, opacity 0.4s, padding 3s linear;
 }/*# sourceMappingURL=index.css.map */

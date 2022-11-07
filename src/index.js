@@ -6,12 +6,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./dasha_style.sass";
 import "./grid.sass";
+import ScrollToTop from "./component/ScrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <App />
     </BrowserRouter>
   </React.StrictMode>,
