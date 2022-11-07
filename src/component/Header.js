@@ -28,9 +28,9 @@ function Header(props) {
             />
           </div>
         </Link>
-        <ul className="headeRight">
-          <Link className="link" to="/">
-            <li className="icon" /*onClick={props.onClickCard}*/>
+        <ul className="top_menu">
+          <li className="icon" /*onClick={props.onClickCard}*/>
+            <Link className="link" to="/">
               {
                 <span
                   onClick={() => onClickHeader(0)}
@@ -42,27 +42,26 @@ function Header(props) {
               <div className="icon_down">
                 <i class="fa-solid fa-chevron-down "></i>
               </div>
-              <div className="menu_hidden">
-                <ul className="menu">
-                  <li>
-                    <Link className="menu_link" to="/next">
-                      О нас
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="menu_link" to="/">
-                      Напитки
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="menu_link" to="/">
-                      Контакты
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </Link>
+            </Link>
+
+            <ul className="inner_menu">
+              <li>
+                <Link className="menu_link" to="/next">
+                  О нас
+                </Link>
+              </li>
+              <li>
+                <Link className="menu_link" to="/">
+                  Напитки
+                </Link>
+              </li>
+              <li>
+                <Link className="menu_link" to="/">
+                  Контакты
+                </Link>
+              </li>
+            </ul>
+          </li>
 
           <Link className="link" to="/menu">
             <li className="icon" /*onClick={props.onClickCard}*/>
