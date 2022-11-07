@@ -3,16 +3,6 @@ import Menu from "./Menu/Menu";
 import React from "react";
 
 function Header(props) {
-  /*  this.state = {
-    selected: null
-  };
-
-
-onClickItem (item) {
-  this.setState({
-    selected: item
-  })
-}*/
   const LinkNames = ["Главная", "Меню", "О нас"];
   const [activePage, setActivePage] = React.useState(0);
   const onClickHeader = (index) => {
@@ -42,12 +32,12 @@ onClickItem (item) {
           <Link className="link" to="/">
             <li className="icon" /*onClick={props.onClickCard}*/>
               {
-                <p
+                <span
                   onClick={() => onClickHeader(0)}
                   className={activePage == 0 ? "PageActive" : "PageNotActive"}
                 >
                   {LinkNames[0]}
-                </p>
+                </span>
               }
               <div className="icon_down">
                 <i class="fa-solid fa-chevron-down "></i>
@@ -76,23 +66,23 @@ onClickItem (item) {
 
           <Link className="link" to="/menu">
             <li className="icon" /*onClick={props.onClickCard}*/>
-              <p
+              <span
                 onClick={() => onClickHeader(1)}
                 className={activePage == 1 ? "PageActive" : "PageNotActive"}
               >
                 {LinkNames[1]}
-              </p>
+              </span>
             </li>
           </Link>
 
           <Link className="link" to="/">
             <li className="icon" /*onClick={props.onClickCard}*/>
-              <p
+              <span
                 onClick={() => onClickHeader(2)}
                 className={activePage == 2 ? "PageActive" : "PageNotActive"}
               >
                 {LinkNames[2]}
-              </p>
+              </span>
             </li>
           </Link>
         </ul>

@@ -10,6 +10,7 @@ import Next from "./component/Next";
 import { Routes, Route, Link } from "react-router-dom";
 import FruitCard from "./component/Menu/FruitCard";
 import Logo from "./component/img/main/logo.svg";
+import Header2 from "./component/kek";
 
 function App() {
   const [cartOpened, setCartOpened] = React.useState(false);
@@ -19,7 +20,7 @@ function App() {
       {cartOpened && <PopUp onClose={() => setCartOpened(false)} />}
 
       <Header onClickCard={() => setCartOpened(true)} />
-
+      <Header2></Header2>
       <div>
         <div>
           <Routes>
