@@ -19,7 +19,14 @@ function Header(props) {
         <Link className="link" to="/">
           {" "}
           {/*   /  - переход на главную страницу*/}
-          <div className="headerLeft">
+          <div
+            /*className="headerLeft"*/ onClick={() => onClickHeader(0)}
+            className={
+              activePage === 0
+                ? "headerLeft PageActive"
+                : "headerLeft PageNotActive"
+            }
+          >
             <img
               className="imgName"
               src={require("./img/logo.png")}
