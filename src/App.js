@@ -19,7 +19,6 @@ function App() {
       {cartOpened && <PopUp onClose={() => setCartOpened(false)} />}
 
       <Header onClickCard={() => setCartOpened(true)} />
-
       <Routes>
         {/*  Ссылки на другие страницы */}
         <Route path="/" element={<Main />} />

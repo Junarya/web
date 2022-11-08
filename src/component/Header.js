@@ -1,14 +1,22 @@
 import { Routes, Route, Link } from "react-router-dom";
 import Menu from "./Menu/Menu";
 import React from "react";
+import { useRef } from "react";
+//import {kek as Link } from "react-scroll";
 
 function Header(props) {
+  const aboutSection = useRef(null);
   const LinkNames = ["Главная", "Меню", "О нас"];
   const [activePage, setActivePage] = React.useState(0);
   const onClickHeader = (index) => {
     setActivePage(index);
   };
-
+  const scrollDown = (ref) => {
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="header_background">
       <header className="container">
@@ -46,17 +54,26 @@ function Header(props) {
 
             <ul className="inner_menu">
               <li>
-                <Link className="menu_link" to="/next">
+                <Link
+                  className="menu_link"
+                  onClick={() => scrollDown(props.section1)}
+                >
                   О нас
                 </Link>
               </li>
               <li>
-                <Link className="menu_link" to="/">
+                <Link
+                  className="menu_link"
+                  onClick={() => scrollDown(props.section2)}
+                >
                   Напитки
                 </Link>
               </li>
               <li>
-                <Link className="menu_link" to="/">
+                <Link
+                  className="menu_link"
+                  onClick={() => scrollDown(props.section3)}
+                >
                   Контакты
                 </Link>
               </li>

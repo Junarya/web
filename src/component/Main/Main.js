@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../img/main/logo.svg";
 import { Routes, Route, Link } from "react-router-dom";
+import { useRef } from "react";
 
 function Main(props) {
   return (
@@ -18,13 +19,13 @@ function Main(props) {
           className="drink"
         />
       </div>
-      <div className="o_nas_blok">
+      <div id="about" className="o_nas_blok">
         <div className="block-cent">
           <div className="headline">
             <h1>O НАС</h1>
           </div>
         </div>
-        <div className="container o_nas_inside">
+        <div className="container o_nas_inside" ref={props.section1}>
           <div className="o_nas_img">
             <img src="1 1.png" alt="" className="col2" />
             <div className="col2 flex_img">
@@ -139,7 +140,7 @@ function Main(props) {
           </div>
         </div>
       </div>
-      <div className="menu_dasha">
+      <div className="menu_dasha" ref={props.section2}>
         <div className="block-cent">
           <div className="headline">
             <h1>НАШИ НАПИТКИ</h1>
@@ -180,7 +181,7 @@ function Main(props) {
           </Link>
         </div>
       </div>
-      <div className="contacts">
+      <div className="contacts" ref={props.section3}>
         <div className="block-cent">
           <div className="headline">
             <h1>КОНТАКТЫ</h1>
@@ -188,8 +189,9 @@ function Main(props) {
         </div>
         <div className="container">
           <div className="contacts_info">
-            <img className="map" src="Rectangle.png" alt="" />
             <iframe
+              className="map"
+              title="yandex"
               src="https://yandex.ru/map-widget/v1/?um=constructor%3A507ed5e12a37364f31f15812cebf2e17e56006b510cbc99f5cd0f5dfcd03712e&amp;source=constructor"
               width="638"
               height="502"
