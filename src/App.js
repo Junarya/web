@@ -6,22 +6,30 @@ import Main from "./component/Main/Main";
 import Menu from "./component/Menu/Menu";
 import Header from "./component/Header";
 import PopUp from "./component/PopUp";
-import Next from "./component/Next";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import FruitCard from "./component/Menu/FruitCard";
 import Logo from "./component/img/main/logo.svg";
+import { useRef } from "react";
 
 function App() {
   const [cartOpened, setCartOpened] = React.useState(false);
-
+  const myRef = useRef(null);
   return (
     <div /*classNameName="wrapper"*/>
       {cartOpened && <PopUp onClose={() => setCartOpened(false)} />}
 
-      <Header onClickCard={() => setCartOpened(true)} />
+      <Header
+        refProp1={myRef}
+        refProp2={myRef}
+        refProp3={myRef}
+        onClickCard={() => setCartOpened(true)}
+      />
       <Routes>
         {/*  Ссылки на другие страницы */}
-        <Route path="/" element={<Main />} />
+        <Route
+          path="/"
+          element={<Main refProp1={myRef} refProp2={myRef} refProp3={myRef} />}
+        />
         <Route path="/menu" element={<Menu />} exact />
       </Routes>
     </div>

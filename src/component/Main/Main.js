@@ -1,9 +1,8 @@
 import React from "react";
 import Logo from "../img/main/logo.svg";
-import { Routes, Route, Link } from "react-router-dom";
-import { useRef } from "react";
+import { Link } from "react-router-dom";
 
-function Main(props) {
+function Main(props, ref) {
   return (
     <div className="content_dasha">
       <div className="head">
@@ -19,13 +18,13 @@ function Main(props) {
           className="drink"
         />
       </div>
-      <div id="about" className="o_nas_blok">
+      <div id="about" className="o_nas_blok" ref={props.refProp1}>
         <div className="block-cent">
           <div className="headline">
             <h1>O НАС</h1>
           </div>
         </div>
-        <div className="container o_nas_inside" ref={props.section1}>
+        <div className="container o_nas_inside">
           <div className="o_nas_img">
             <img src="1 1.png" alt="" className="col2" />
             <div className="col2 flex_img">
@@ -140,7 +139,7 @@ function Main(props) {
           </div>
         </div>
       </div>
-      <div className="menu_dasha" ref={props.section2}>
+      <div className="menu_dasha" ref={props.refProp2}>
         <div className="block-cent">
           <div className="headline">
             <h1>НАШИ НАПИТКИ</h1>
@@ -181,7 +180,7 @@ function Main(props) {
           </Link>
         </div>
       </div>
-      <div className="contacts" ref={props.section3}>
+      <div className="contacts" ref={props.refProp3}>
         <div className="block-cent">
           <div className="headline">
             <h1>КОНТАКТЫ</h1>

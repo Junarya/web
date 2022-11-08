@@ -1,11 +1,7 @@
-import { Routes, Route, Link } from "react-router-dom";
-import Menu from "./Menu/Menu";
+import { Link } from "react-router-dom";
 import React from "react";
-import { useRef } from "react";
-//import {kek as Link } from "react-scroll";
 
 function Header(props) {
-  const aboutSection = useRef(null);
   const LinkNames = ["Главная", "Меню", "О нас"];
   const [activePage, setActivePage] = React.useState(0);
   const onClickHeader = (index) => {
@@ -13,7 +9,7 @@ function Header(props) {
   };
   const scrollDown = (ref) => {
     window.scrollTo({
-      top: ref.current.offsetTop,
+      top: ref.current.offsetTop - 110,
       behavior: "smooth",
     });
   };
@@ -42,7 +38,7 @@ function Header(props) {
               {
                 <span
                   onClick={() => onClickHeader(0)}
-                  className={activePage == 0 ? "PageActive" : "PageNotActive"}
+                  className={activePage === 0 ? "PageActive" : "PageNotActive"}
                 >
                   {LinkNames[0]}
                 </span>
@@ -56,7 +52,7 @@ function Header(props) {
               <li>
                 <Link
                   className="menu_link"
-                  onClick={() => scrollDown(props.section1)}
+                  onClick={() => scrollDown(props.refProp1)}
                 >
                   О нас
                 </Link>
@@ -64,7 +60,7 @@ function Header(props) {
               <li>
                 <Link
                   className="menu_link"
-                  onClick={() => scrollDown(props.section2)}
+                  onClick={() => scrollDown(props.refProp2)}
                 >
                   Напитки
                 </Link>
@@ -72,7 +68,7 @@ function Header(props) {
               <li>
                 <Link
                   className="menu_link"
-                  onClick={() => scrollDown(props.section3)}
+                  onClick={() => scrollDown(props.refProp3)}
                 >
                   Контакты
                 </Link>
@@ -84,7 +80,7 @@ function Header(props) {
             <li className="icon" /*onClick={props.onClickCard}*/>
               <span
                 onClick={() => onClickHeader(1)}
-                className={activePage == 1 ? "PageActive" : "PageNotActive"}
+                className={activePage === 1 ? "PageActive" : "PageNotActive"}
               >
                 {LinkNames[1]}
               </span>
@@ -95,7 +91,7 @@ function Header(props) {
             <li className="icon" /*onClick={props.onClickCard}*/>
               <span
                 onClick={() => onClickHeader(2)}
-                className={activePage == 2 ? "PageActive" : "PageNotActive"}
+                className={activePage === 2 ? "PageActive" : "PageNotActive"}
               >
                 {LinkNames[2]}
               </span>
