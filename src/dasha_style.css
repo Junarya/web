@@ -171,7 +171,6 @@ body {
 .ingridients_text {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
 }
 
 .ingridients_text_param {
@@ -189,7 +188,7 @@ body {
 }
 
 .statistica {
-  background: url("./component/img/main/leaf.svg");
+  background: url("./component/img/main/leaf_back.svg");
   background-repeat: no-repeat;
   padding: 60px 0;
   background-position: center;
@@ -204,6 +203,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  height: 500px;
 }
 
 .list {
@@ -260,6 +260,7 @@ li::marker {
 }
 .menu_btn:hover p {
   color: #383838;
+  transition: 0.2s;
 }
 .menu_btn:active {
   background-color: #dfbbaa;
@@ -335,24 +336,20 @@ li::marker {
 }
 
 .icon-style:hover {
-  -webkit-animation: none;
-          animation: none;
-  background: #fff;
-  color: #551B54;
-  border: 2px solid #551B54;
+  background: #F4DDD3;
+  color: #383838;
+  border: 2px solid #383838;
 }
 
 .icon-style {
-  background-color: #551B54;
+  background-color: #383838;
   border: 2px solid #fff;
   border-radius: 50%;
   height: 50px;
   width: 50px;
   color: #fff;
   cursor: pointer;
-  -webkit-animation: movebtn 3s ease-in-out infinite;
-          animation: movebtn 3s ease-in-out infinite;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .top-to-btm {
@@ -364,4 +361,62 @@ li::marker {
   bottom: 40px;
   right: 25px;
   z-index: 20;
+}
+
+.links {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+.links:hover {
+  left: 0;
+}
+.links:hover:before {
+  width: 100%;
+  left: 0;
+}
+.links::before {
+  content: "";
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: 0.2s;
+}
+
+.boba_menu_img {
+  margin-bottom: 24px;
+}
+
+.chart {
+  background: #fff;
+  height: 500px;
+  width: 700px;
+}
+
+.path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  -webkit-animation: dash 3s linear alternate infinite;
+          animation: dash 3s linear alternate infinite;
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 300;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 300;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }/*# sourceMappingURL=dasha_style.css.map */

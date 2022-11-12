@@ -7,13 +7,11 @@ import Menu from "./component/Menu/Menu";
 import Header from "./component/Header";
 import PopUp from "./component/PopUp";
 import { Routes, Route } from "react-router-dom";
-import FruitCard from "./component/Menu/FruitCard";
-import Logo from "./component/img/main/logo.svg";
 import { useRef } from "react";
 import ScrollToTopBtn from "./component/TopBtn";
 
 function App() {
-  //я установила react-icons и react-scroll
+  //я установила react-icons и recharts и framer-motion(react-scroll и canvasjs удалила)
   const [cartOpened, setCartOpened] = React.useState(false);
   const myRef = useRef(null);
   const myRef2 = useRef(null);

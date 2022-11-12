@@ -1,23 +1,117 @@
 import React from "react";
 import Logo from "../img/main/logo.svg";
 import { Link } from "react-router-dom";
+import leaf_black from "../img/main/leaf_black.svg";
+import fruit from "../img/main/fruit.svg";
+import milk from "../img/main/milk.svg";
+import frappe from "../img/main/frappe.svg";
+import cofe from "../img/main/cofe.svg";
+import Graph from "./Graph";
+
+import { motion } from "framer-motion";
+
+//"ingridients_text_param Montserrat_A"
+function IngridientsBlock(props) {
+  return (
+    <div>
+      <div className="ingridients_text" style={{ marginBottom: props.style }}>
+        <img src={leaf_black} alt="" className="leaf" />
+        <div className="Montserrat">
+          <p className="font30">
+            <b>{props.header}</b>
+          </p>
+          <p className="ingridients_text_param Montserrat_A">{props.text}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Bottle(props) {
+  return (
+    <div className="col2 bottle1">
+      <svg
+        width="133"
+        height="145"
+        viewBox="0 0 133 145"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          className="path"
+          d="M53.7037 53.8404L10.7891 73.6705M10.7891 73.6705L32.3989 111.127M10.7891 73.6705L5.56093 64.6139M63.7483 126.848L72.0214 130.671C74.4951 131.815 77.4398 130.885 78.795 128.538L84.2403 119.104M96.0044 98.715L89.4682 110.041M60.7601 34.8623C52.4515 21.69 35.36 16.4041 20.7901 23.1399M20.7901 23.1399C5.03026 30.4217 -1.78863 48.9904 5.56093 64.6139M20.7901 23.1399C25.0408 21.1764 29.5034 20.2596 33.9024 20.2401L26.0274 3.50487C25.4147 2.19804 23.8535 1.63887 22.5402 2.24352L3.51559 11.0338C2.20232 11.6449 1.63421 13.1923 2.24624 14.4927L10.1212 31.2279C12.9682 27.9056 16.5413 25.1034 20.7901 23.1399ZM5.56093 64.6139L55.4151 41.5721M70.708 38.2301L127.782 64.6138M70.708 38.2301L67.0654 48.0281M70.708 38.2301C78.0576 22.6131 96.7915 15.8515 112.552 23.1399M127.782 64.6138L122.554 73.6706M127.782 64.6138C135.131 48.9903 128.313 30.4217 112.552 23.1399M122.554 73.6706L67.0654 48.0281M122.554 73.6706L85.5214 137.855C82.8109 142.556 76.9215 144.409 71.9741 142.12L46.6738 130.43C41.7271 128.142 39.3741 122.479 41.262 117.401L67.0654 48.0281M88.9684 74.997C76.6406 81.9343 56.6898 81.9343 44.362 74.997M88.9684 88.0003C76.6406 94.9376 56.6898 94.9376 44.362 88.0003M112.552 23.1399C108.299 21.1699 103.832 20.2595 99.4286 20.24L107.303 3.50481C107.916 2.19798 109.477 1.63881 110.79 2.24346L129.815 11.0337C131.128 11.6449 131.696 13.1923 131.083 14.4926L123.214 31.2214C120.368 27.899 116.797 25.0969 112.552 23.1399Z"
+          stroke="black"
+          stroke-width="3"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  );
+}
 
 function Main(props, ref) {
+  const item_left = {
+    hidden: { opacity: 0, x: -200 },
+    show: { opacity: 1, x: 0, transition: { delay: 0.3 } },
+  };
+  const item_right = {
+    hidden: { opacity: 0, x: 200 },
+    show: { opacity: 1, x: 0, transition: { delay: 0.3 } },
+  };
+  const item_mid = {
+    hidden: { opacity: 0, y: -200 },
+    show: { opacity: 1, y: 0, transition: { delay: 0.5 } },
+  };
+  const item_chat = {
+    hidden: { display: "none", opacity: 0 },
+    show: { display: "block", opacity: 1 },
+  };
+  const arrInfo = [
+    {
+      header: "Заботимся о качестве",
+      text: "Мы верим, что только качественные чай и кофе могут придать напитку неповторимый вкус и аромат.",
+      style: "30px",
+    },
+    {
+      header: "Уделяем внимание мелочам",
+      text: "Используем свежее молоко, а также соевое, миндальное и кокосовое молоко, если обычное молоко не для вас.",
+      style: "30px",
+    },
+    {
+      header: "Готовим с пользой",
+      text: "Мы против порошков и искусственных добавок. В рецептах наших напитков мы используем только натуральные топпинги богатые полезными свойствами.",
+      style: "0",
+    },
+  ];
   return (
     <div className="content_dasha">
-      <div className="head">
-        <img
+      <motion.div
+        className="head"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+        <motion.img
+          variants={item_left}
           src={require("../img/main/drink.png")}
           alt="напитки"
           className="drink"
         />
-        <img src={Logo} alt="логотип" className="logo" />
-        <img
+        <motion.img
+          variants={item_mid}
+          src={Logo}
+          alt="логотип"
+          className="logo"
+        />
+        <motion.img
+          variants={item_right}
           src={require("../img/main/drink.png")}
           alt="напитки"
           className="drink"
         />
-      </div>
+      </motion.div>
       <div id="about" className="o_nas_blok" ref={props.refProp1}>
         <div className="block-cent">
           <div className="headline">
@@ -26,10 +120,18 @@ function Main(props, ref) {
         </div>
         <div className="container o_nas_inside">
           <div className="o_nas_img">
-            <img src="1 1.png" alt="" className="col2" />
+            <img src={require("../img/main/1 1.png")} alt="" className="col2" />
             <div className="col2 flex_img">
-              <img src="image 21.png" alt="" className="immg" />
-              <img src="image 22.png" alt="" className="immg" />
+              <img
+                src={require("../img/main/image 21.png")}
+                alt=""
+                className="immg"
+              />
+              <img
+                src={require("../img/main/image 22.png")}
+                alt=""
+                className="immg"
+              />
             </div>
           </div>
           <div className="col8 o_nas_text">
@@ -49,9 +151,7 @@ function Main(props, ref) {
       </div>
       <div className="tagline">
         <div className="container info">
-          <div className="col2 bottle1">
-            <img src="bottle.svg" alt="" />
-          </div>
+          <Bottle />
           <div className="col8">
             <div className="Montserrat_A font30 border">
               <p style={{ marginBottom: "30px" }}>
@@ -60,60 +160,20 @@ function Main(props, ref) {
               <p>Проявляем заботу и любовь во всем</p>
             </div>
           </div>
-          <div className="col2 bottle1">
-            <img src="bottle.svg" alt="" className="transform" />
-          </div>
+          <Bottle />
         </div>
       </div>
       <div className="ingridients">
         <div className="container ingridients_flex">
           <div className="col7">
             <div>
-              <div className="ingridients_text">
-                <img src="листики.svg" alt="" className="leaf" />
-                <div className="Montserrat">
-                  <p className="font30">
-                    <b>Заботимся о качестве</b>
-                  </p>
-                  <p className="ingridients_text_param Montserrat_A">
-                    Мы верим, что только качественные чай и кофе могут придать
-                    напитку неповторимый вкус и аромат.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="ingridients_text">
-                <img src="листики.svg" alt="" className="leaf" />
-                <div className="Montserrat">
-                  <p className="font30">
-                    <b>Уделяем внимание мелочам</b>
-                  </p>
-                  <p className="ingridients_text_param Montserrat_A">
-                    Используем свежее молоко, а также соевое, миндальное и
-                    кокосовое молоко, если обычное молоко не для вас.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div style={{ margin: 0 }} className="ingridients_text">
-                <img src="листики.svg" alt="" className="leaf" />
-                <div className="Montserrat">
-                  <p className="font30">
-                    <b>Готовим с пользой</b>
-                  </p>
-                  <p className="ingridients_text_param Montserrat_A">
-                    Мы против порошков и искусственных добавок. В рецептах наших
-                    напитков мы используем только натуральные топпинги богатые
-                    полезными свойствами.
-                  </p>
-                </div>
-              </div>
+              {arrInfo.map((item) => (
+                <IngridientsBlock {...item} />
+              ))}
             </div>
           </div>
           <div className="col4">
-            <img src="выбор видоса.png" alt="" />
+            <img src={require("../img/main/video.png")} alt="" />
           </div>
         </div>
       </div>
@@ -133,9 +193,11 @@ function Main(props, ref) {
                 <li>более 4000 стаканов в месяц</li>
               </ul>
             </div>
-            <div className="col7">
-              <img className="stat_graph" src="график.jpg" alt="" />
-            </div>
+            <motion.div className="col7" initial="hidden" whileInView="show">
+              <motion.div className="chart" variants={item_chat}>
+                <Graph></Graph>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -152,19 +214,19 @@ function Main(props, ref) {
         </div>
         <div className="menu_block Montserrat_A container">
           <div className="col3 menu_img">
-            <img classNameName="boba_menu_img" src="" alt="" />
+            <img className="boba_menu_img" src={fruit} alt="" />
             <p>Фруктовые чаи</p>
           </div>
           <div className="col3 menu_img">
-            <img classNameName="boba_menu_img" src="Group 21.png" alt="" />
-            <p>Фруктовые чаи</p>
+            <img className="boba_menu_img" src={milk} alt="" />
+            <p>Молочные чаи</p>
           </div>
           <div className="col3 menu_img">
-            <img classNameName="boba_menu_img" src="Group 21.png" alt="" />
-            <p>Фруктовые чаи</p>
+            <img className="boba_menu_img" src={frappe} alt="" />
+            <p>Фраппе</p>
           </div>
           <div className="col3 menu_img">
-            <img classNameName="boba_menu_img" src="Group 21.png" alt="" />
+            <img className="boba_menu_img" src={cofe} alt="" />
             <p>Кофе</p>
           </div>
         </div>
@@ -200,17 +262,19 @@ function Main(props, ref) {
               <div className="social">
                 <div className="vk soc_link">
                   <div className="bg-Vector"></div>
-                  <Link>vk.com/wahaha.tea.coffee</Link>
+                  <a class="links" href="https://vk.com/wahaha.tea.coffee">
+                    vk.com/wahaha.tea.coffee
+                  </a>
                 </div>
                 <div className="tg soc_link">
                   <div className="bg-Path_3"></div>
-                  <Link>vk.com/wahaha.tea.coffee</Link>
+                  <a class="links" href="https://t.me/Wahaha_spb">
+                    t.me/Wahaha_spb
+                  </a>
                 </div>
                 <div className="tel soc_link">
                   <div className="bg-Vector2"></div>
-                  <a href="https://vk.com/wahaha.tea.coffee">
-                    vk.com/wahaha.tea.coffee
-                  </a>
+                  <p>+7 (981) 190-88-66</p>
                 </div>
               </div>
               <p className="Montserrat" style={{ padding: "45px 0" }}>
