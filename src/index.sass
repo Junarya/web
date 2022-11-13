@@ -9,21 +9,22 @@ body
 
 
 .wrapper
-    background: #ffffff
-    border-radius: 20px
-    max-width: 1920px
-    height: 110px
+  background: #ffffff
+  border-radius: 20px
+  max-width: 1920px
+  height: 110px
 
     
 
 header
-  background-color: #F4EFEB
+
+  //background-color: #F4EFEB
   display: flex
   justify-content: space-between
-  padding: 15px 330px
-  box-shadow: (0px 0px 10px rgba(0, 0, 0, 0.25))
+  padding: 15px 0 15px 30px
   font-family: 'Montserrat', sans-serif
-  font-size: 18px
+  font-size: 22px
+  align-items: center
   img
     margin-right: 15px  
   h3, p
@@ -32,7 +33,6 @@ header
     display: flex
     align-items: center
   li, ul , .icon_down
-    margin-top: 30px
     list-style-type: none
     display: inline
   .icon
@@ -46,68 +46,45 @@ header
 
 
 .logoName
-    width: 180px
-    height: 55px
+  //width: 180px
+  //height: 55px
 
 .imgName
-  width: 78px
-  height: 79px
+  //width: 78px
+  //height: 79px
 
 .icon:hover
-  transition: 0.2s
-  .menu
-    display: block
-
-
-
-
-.menu_hidden
-  justify-content: none
-  position: relative
-  bottom: 28px
-  display: inline-block
-
-
-.menu
-  position: absolute
-  list-style-type: none
-  padding-left: 0px
-  left: -100px
-  width: 120px
-  display: none
-  cursor: pointer
-
+  transition: 0.15s
 
 .menu_link
-  padding-left: 10px
+  padding: 10px
   background-color: #F4EFEB
   color: #111111
   text-decoration: none
   display: block
   font-family: 'Montserrat', sans-serif
-  font-size: 18px
+  font-size: 22px
   height: 30px
   border-top:  1px solid #9A6F5C
   line-height: 30px
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)  
-
-.menu a:hover
-  color: #7a6c6c
-  transition-delay: 0s
-
-
+  &:hover
+    background-color: #dbccc0
+    color: #000
 
 
     
     
 
 .content
-  padding-top: 40px
-  padding-bottom: 40px
+  h1
+    margin: 0
+  padding: 40px 282px
+  //background-color: #FFFFFF
   margin: auto
   max-width: 1380px
   background-color: #FFFFFF
-
+ 
 
 @media screen and  (max-width: 1500px)
   .content
@@ -645,4 +622,29 @@ header
  
 
 
- 
+.titleMenu
+  font-size: 24px
+  bottom: 22px
+
+.intoMenu
+  font-size: 20px
+  display: block
+  padding-top: 20px
+
+.imgTextCard 
+  display: inline-flex
+
+.imgCardMenu
+  padding-top: 16px
+  padding-right: 24px
+
+.titleMenuCard
+    text-align: center
+    font-family: 'Russo One', sans-serif
+    font-size: 50px
+    margin-left: 573px
+    width: 211px
+    height: 61px
+    background-color: #D4D8B8
+    margin-bottom: 36px
+
