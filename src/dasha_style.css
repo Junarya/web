@@ -403,7 +403,7 @@ li::marker {
           animation: dash 3s linear alternate infinite;
 }
 
-.map2 {
+.map2, .map3 {
   display: none;
 }
 
@@ -424,7 +424,7 @@ li::marker {
     stroke-dashoffset: 0;
   }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1440px) and (min-width: 1000px) {
   header, .menu_link {
     font-size: 18px;
   }
@@ -488,8 +488,68 @@ li::marker {
     margin-left: 45px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) and (min-width: 500px) {
   .Montserrat, .Montserrat_A {
     font-size: 10px;
+  }
+  .o_nas_inside, .stat_flex, .ingridients_flex {
+    flex-direction: column;
+  }
+  .o_nas_img {
+    margin-bottom: 50px;
+  }
+  .video {
+    margin-top: 30px;
+  }
+  .contacts_info {
+    flex-direction: column-reverse;
+  }
+  .bottle1 {
+    width: 70px;
+  }
+  .boba_menu_img {
+    height: 100px;
+  }
+  .menu_block {
+    border-radius: 0;
+  }
+  .chart {
+    width: 450px;
+  }
+  .map, .map2 {
+    display: none;
+  }
+  .map3 {
+    display: block;
+  }
+  .video {
+    width: 300px;
+  }
+  .col8, .col7 {
+    width: 480px;
+  }
+  .ingridients {
+    padding: 20px 0;
+  }
+  .stat_flex {
+    height: auto;
+  }
+  .statistica {
+    padding: 0;
+  }
+  .header_background {
+    height: 86px;
+  }
+  .imgName {
+    width: 20%;
+  }
+  .logoName {
+    width: 50%;
+  }
+  .container {
+    max-width: 1240px;
+  }
+  .content_dasha {
+    padding-top: 86px;
   }
 }/*# sourceMappingURL=dasha_style.css.map */

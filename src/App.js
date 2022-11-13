@@ -11,7 +11,6 @@ import { useRef } from "react";
 import ScrollToTopBtn from "./component/TopBtn";
 
 function App() {
-  //я установила react-icons и recharts и framer-motion(react-scroll и canvasjs удалила)
   const [cartOpened, setCartOpened] = React.useState(false);
   const myRef = useRef(null);
   const myRef2 = useRef(null);

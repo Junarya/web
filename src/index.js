@@ -4,8 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.sass";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "./dasha_style.sass";
 import "./grid.sass";
+import "./dasha_style.sass";
 import ScrollToTop from "./component/ScrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

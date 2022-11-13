@@ -10,7 +10,7 @@ function Header(props) {
   const scrollDown = (ref) => {
     window.scrollTo({
       top: ref.current.offsetTop - 110,
-      behavior: "smooth",
+      behavior: "smooth"
     });
   };
   return (

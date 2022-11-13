@@ -54,36 +54,36 @@ function Bottle(props) {
 function Main(props, ref) {
   const item_left = {
     hidden: { opacity: 0, x: -200 },
-    show: { opacity: 1, x: 0, transition: { delay: 0.3 } },
+    show: { opacity: 1, x: 0, transition: { delay: 0.3 } }
   };
   const item_right = {
     hidden: { opacity: 0, x: 200 },
-    show: { opacity: 1, x: 0, transition: { delay: 0.3 } },
+    show: { opacity: 1, x: 0, transition: { delay: 0.3 } }
   };
   const item_mid = {
     hidden: { opacity: 0, y: -200 },
-    show: { opacity: 1, y: 0, transition: { delay: 0.5 } },
+    show: { opacity: 1, y: 0, transition: { delay: 0.5 } }
   };
   const item_chat = {
     hidden: { display: "none", opacity: 0 },
-    show: { display: "block", opacity: 1 },
+    show: { display: "block", opacity: 1 }
   };
   const arrInfo = [
     {
       header: "Заботимся о качестве",
       text: "Мы верим, что только качественные чай и кофе могут придать напитку неповторимый вкус и аромат.",
-      style: "30px",
+      style: "30px"
     },
     {
       header: "Уделяем внимание мелочам",
       text: "Используем свежее молоко, а также соевое, миндальное и кокосовое молоко, если обычное молоко не для вас.",
-      style: "30px",
+      style: "30px"
     },
     {
       header: "Готовим с пользой",
       text: "Мы против порошков и искусственных добавок. В рецептах наших напитков мы используем только натуральные топпинги богатые полезными свойствами.",
-      style: "0",
-    },
+      style: "0"
+    }
   ];
   return (
     <div className="content_dasha">
@@ -274,6 +274,14 @@ function Main(props, ref) {
               src="https://yandex.ru/map-widget/v1/?um=constructor%3A7a4f40f21d30bc789f795c04337dc65b76f901bc09748c41a436f4bdf356d464&amp;source=constructor"
               width="520"
               height="418"
+              frameborder="0"
+            ></iframe>
+            <iframe
+              className="map3"
+              title="yandex"
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A7a4f40f21d30bc789f795c04337dc65b76f901bc09748c41a436f4bdf356d464&amp;source=constructor"
+              width="400"
+              height="400"
               frameborder="0"
             ></iframe>
             <div className="col6 Montserrat_A">
