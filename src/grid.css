@@ -92,4 +92,79 @@
 
 .col12 {
   margin: 0 10px;
+}
+
+@media screen and (max-width: 1440px) {
+  .col1 {
+    width: 90px;
+  }
+  .col2 {
+    width: 195px;
+  }
+  .col3 {
+    width: 300px;
+  }
+  .col4 {
+    width: 405px;
+  }
+  .col5 {
+    width: 510px;
+  }
+  .col6 {
+    width: 615px;
+  }
+  .col7 {
+    width: 720px;
+  }
+  .col8 {
+    width: 825px;
+  }
+  .col9 {
+    width: 930px;
+  }
+  .col10 {
+    width: 1035px;
+  }
+  .col11 {
+    width: 1140px;
+  }
+  .col12 {
+    width: 1245px;
+  }
+  .col1 {
+    margin: 0 10px;
+  }
+  .col2 {
+    margin: 0 10px;
+  }
+  .col3 {
+    margin: 0 10px;
+  }
+  .col4 {
+    margin: 0 10px;
+  }
+  .col5 {
+    margin: 0 10px;
+  }
+  .col6 {
+    margin: 0 10px;
+  }
+  .col7 {
+    margin: 0 10px;
+  }
+  .col8 {
+    margin: 0 10px;
+  }
+  .col9 {
+    margin: 0 10px;
+  }
+  .col10 {
+    margin: 0 10px;
+  }
+  .col11 {
+    margin: 0 10px;
+  }
+  .col12 {
+    margin: 0 10px;
+  }
 }/*# sourceMappingURL=grid.css.map */

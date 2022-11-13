@@ -49,16 +49,6 @@ header .icon_down {
   margin-left: 5px;
 }
 
-.logoName {
-  width: 180px;
-  height: 55px;
-}
-
-.imgName {
-  width: 78px;
-  height: 79px;
-}
-
 .icon:hover {
   transition: 0.15s;
 }

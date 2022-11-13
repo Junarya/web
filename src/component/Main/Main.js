@@ -173,7 +173,11 @@ function Main(props, ref) {
             </div>
           </div>
           <div className="col4">
-            <img src={require("../img/main/video.png")} alt="" />
+            <img
+              className="video"
+              src={require("../img/main/video.png")}
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -193,7 +197,12 @@ function Main(props, ref) {
                 <li>более 4000 стаканов в месяц</li>
               </ul>
             </div>
-            <motion.div className="col7" initial="hidden" whileInView="show">
+            <motion.div
+              className="col7"
+              viewport={{ once: true }}
+              initial="hidden"
+              whileInView="show"
+            >
               <motion.div className="chart" variants={item_chat}>
                 <Graph></Graph>
               </motion.div>
@@ -256,6 +265,15 @@ function Main(props, ref) {
               src="https://yandex.ru/map-widget/v1/?um=constructor%3A507ed5e12a37364f31f15812cebf2e17e56006b510cbc99f5cd0f5dfcd03712e&amp;source=constructor"
               width="638"
               height="502"
+              frameborder="0"
+            ></iframe>
+
+            <iframe
+              className="map2"
+              title="yandex"
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A7a4f40f21d30bc789f795c04337dc65b76f901bc09748c41a436f4bdf356d464&amp;source=constructor"
+              width="520"
+              height="418"
               frameborder="0"
             ></iframe>
             <div className="col6 Montserrat_A">

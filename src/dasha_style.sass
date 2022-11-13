@@ -351,11 +351,68 @@ li::marker
   stroke-dashoffset: 300
   animation: dash 3s linear alternate infinite
 
-
+.map2
+    display: none
 @keyframes dash 
   from 
     stroke-dashoffset: 300
   
   to 
     stroke-dashoffset: 0
-  
+//1000-1440 
+@media screen and ( max-width: 1440px ) 
+    header, .menu_link
+        font-size: 18px
+    .Montserrat, .Montserrat_A
+        font-size: 20px
+
+    .container
+        max-width: 1240px
+
+    .header_background    
+        height: 86px
+    .imgName
+        width: 20%
+    .logoName
+        width: 50%
+
+    .content_dasha 
+        padding-top: 86px
+
+    .font30
+        font-size: 25px
+
+    .ingridients
+        padding: 50px 0
+    .video
+        width: 400px    
+    .stat_flex, .chart
+        height: 400px   
+    .chart
+        width: 500px
+
+    .stat_flex
+        justify-content: center
+        .col7
+            width: 500px    
+
+    .statistica
+        padding-bottom: 0
+    .boba_menu_img
+        height: 150px
+
+    .map
+        display: none
+    .map2
+        display: block  
+    .contacts_info
+        padding: 0 10px
+        justify-content: center
+        .col6
+            width: 500px  
+            margin-left: 45px        
+//500-1000
+@media screen and ( max-width: 1000px ) 
+     .Montserrat, .Montserrat_A
+        font-size: 10px
+   
