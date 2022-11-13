@@ -1,7 +1,68 @@
+.top_menu > li > a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.25s, color 0.15s;
+}
+
+.top_menu {
+  display: inline-block;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.top_menu > li {
+  display: inline-block;
+  position: relative;
+}
+
+.inner_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  margin: 0;
+}
+
+.top_menu > li:hover > ul a {
+  opacity: 1;
+  height: 30px;
+  padding: 10px;
+  transition: height 0.3s, opacity 0.4s;
+}
+
+.top_menu > li:hover > ul li {
+  height: 40px;
+  opacity: 1;
+}
+
+.inner_menu > li {
+  height: 0;
+  opacity: 0;
+  transition: height 0.3s, opacity 0.4s;
+}
+
+.inner_menu > li > a {
+  width: 100%;
+  text-decoration: none;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.4s, opacity 0.5s;
+}
+
+.top_menu > li > ul a {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  transition: height 0.3s, opacity 0.4s, padding 3s linear;
+}
+
 body {
   margin: 0 auto;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .link {
@@ -27,17 +88,14 @@ header {
 header img {
   margin-right: 15px;
 }
-header h3,
-header p {
+header h3, header p {
   margin: 0;
 }
 header .headerLeft {
   display: flex;
   align-items: center;
 }
-header li,
-header ul,
-header .icon_down {
+header li, header ul, header .icon_down {
   list-style-type: none;
   display: inline;
 }
@@ -59,14 +117,14 @@ header .icon_down {
 
 .menu_link {
   padding: 10px;
-  background-color: #f4efeb;
+  background-color: #F4EFEB;
   color: #111111;
   text-decoration: none;
   display: block;
   font-family: "Montserrat", sans-serif;
   font-size: 22px;
   height: 30px;
-  border-top: 1px solid #9a6f5c;
+  border-top: 1px solid #9A6F5C;
   line-height: 30px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
@@ -76,10 +134,10 @@ header .icon_down {
 }
 
 .content {
-  padding: 40px 282px;
+  padding: 150px 282px;
   margin: auto;
   max-width: 1380px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 .content h1 {
   margin: 0;
@@ -96,7 +154,7 @@ header .icon_down {
   }
 }
 .menuCardUpper {
-  background-color: #f5f4f2;
+  background-color: #F5F4F2;
   position: absolute;
   left: 0;
   right: 0;
@@ -169,7 +227,7 @@ header .icon_down {
   width: 279px;
   height: 63px;
   border-radius: 22px;
-  background-color: #f4ddd3;
+  background-color: #F4DDD3;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -197,8 +255,7 @@ header .icon_down {
   background-color: #a57763;
 }
 
-.button,
-.btn {
+.button, .btn {
   background: #dddbdb;
   border: 1px solid #2926cf;
   box-sizing: border-box;
@@ -212,10 +269,10 @@ header .icon_down {
   cursor: pointer;
 }
 
-.button:hover,
-.btn:hover {
+.button:hover, .btn:hover {
   background: #7c7373;
 }
+
 .titleOption {
   text-align: center;
   font-family: "Russo One", sans-serif;
@@ -223,7 +280,7 @@ header .icon_down {
   margin: auto;
   width: 211px;
   height: 61px;
-  background-color: #d4d8b8;
+  background-color: #D4D8B8;
   margin-bottom: 36px;
   margin-top: 55px;
 }
@@ -231,7 +288,7 @@ header .icon_down {
 .itemOption {
   max-width: 1360px;
   height: 323px;
-  background-color: #f4eee8;
+  background-color: #F4EEE8;
   border-radius: 88px;
   margin-bottom: 100px;
   font-family: "Montserrat Alternates", sans-serif;
@@ -249,8 +306,7 @@ header .icon_down {
   padding-top: 20px;
 }
 
-.optionFirstCol,
-.optionSecondCol {
+.optionFirstCol, .optionSecondCol {
   display: inline-table;
   margin-top: 25px;
 }
@@ -273,6 +329,7 @@ header .icon_down {
 .optionTopping {
   margin-top: 55px;
 }
+
 .optionThirdCol {
   width: 243px;
   padding-right: 94px;
@@ -420,6 +477,7 @@ header .icon_down {
   max-width: 552px;
   margin: 0 65px;
 }
+
 @media screen and (max-width: 1500px) {
   .textPopUp {
     max-width: 415px;
@@ -454,6 +512,7 @@ header .icon_down {
   background: transparent;
   cursor: pointer;
 }
+
 @media screen and (max-width: 1500px) {
   .btnPopUpClose {
     margin-top: -50px;
@@ -578,15 +637,14 @@ header .icon_down {
     font-size: 16px;
   }
 }
-.btnMenu,
-.btnMenuActive {
+.btnMenu, .btnMenuActive {
   display: inline-block;
   vertical-align: top;
   padding: 15px 31px;
   font-size: 30px;
   margin-right: 18px;
   border: none;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   color: black;
   text-transform: uppercase;
   text-decoration: none;
@@ -596,23 +654,21 @@ header .icon_down {
 }
 
 @media screen and (max-width: 1500px) {
-  .btnMenu,
-  .btnMenuActive {
+  .btnMenu, .btnMenuActive {
     font-size: 27px;
     padding: 15px 23px;
     margin-left: 18px;
   }
 }
 @media screen and (max-width: 1000px) {
-  .btnMenu,
-  .btnMenuActive {
+  .btnMenu, .btnMenuActive {
     font-size: 20px;
     padding: 15px 15px;
     margin-left: 18px;
   }
 }
 .btnMenuActive {
-  background-color: #70715a;
+  background-color: #70715A;
   color: white;
   font-weight: 700;
   font-style: bold;
@@ -620,7 +676,7 @@ header .icon_down {
 
 .btnMenu:hover {
   color: black;
-  background-color: #c6c6bd;
+  background-color: #C6C6BD;
 }
 
 .line {
@@ -638,7 +694,7 @@ header .icon_down {
   }
 }
 .menuUpper {
-  background-color: #f5f4f2;
+  background-color: #F5F4F2;
   position: absolute;
   left: 0;
   right: 0;
@@ -694,6 +750,7 @@ header .icon_down {
 .ItemSlider img {
   width: 1360px;
 }
+
 .ArrowSlider {
   cursor: pointer;
   font-size: 30px;
@@ -701,10 +758,12 @@ header .icon_down {
   width: 27px;
   color: rgb(165, 147, 147);
 }
+
 .SliderArLeft {
   position: absolute;
   margin-left: 16px;
 }
+
 .SliderArRight {
   margin-left: -50px;
 }
@@ -736,6 +795,6 @@ header .icon_down {
   margin-left: 573px;
   width: 211px;
   height: 61px;
-  background-color: #d4d8b8;
+  background-color: #D4D8B8;
   margin-bottom: 36px;
-} /*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

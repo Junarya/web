@@ -4,7 +4,6 @@ import React from "react";
 import Main from "./component/Main/Main";
 import Menu from "./component/Menu/Menu";
 import Header from "./component/Header";
-import PopUp from "./component/PopUp";
 import { Routes, Route } from "react-router-dom";
 import { useRef } from "react";
 import ScrollToTopBtn from "./component/TopBtn";
@@ -16,7 +15,6 @@ function App() {
   const myRef3 = useRef(null);
   return (
     <div /*classNameName="wrapper"*/>
-      {cartOpened && <PopUp onClose={() => setCartOpened(false)} />}
       <ScrollToTopBtn />
       <Header
         refProp1={myRef}
@@ -33,7 +31,6 @@ function App() {
           }
         />
         <Route path="/menu" element={<Menu />} exact />
-     
       </Routes>
     </div>
   );
