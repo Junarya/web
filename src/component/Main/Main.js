@@ -135,11 +135,11 @@ function Main(props, ref) {
             </div>
           </div>
           <div className="col8 o_nas_text">
-            <p className="Montserrat_A line">
+            <p className="Montserrat_A lineD">
               Лавка напитков Wahaha является одной из <b>ПЕРВЫХ</b> в России с
               оригинальными чаями. Это новый тренд из Китая.
             </p>
-            <p className="Montserrat_A line">
+            <p className="Montserrat_A lineD">
               Когда мы впервые задумались о бренде Wahaha, в голове была мысль
               сделать место, соединяющее культуры разных стран. Азия и Европа -
               два диаметральных мира в едином сочетании невероятных вкусов. В
