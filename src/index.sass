@@ -81,8 +81,18 @@ header
     margin: 0
   padding: 40px 282px
   //background-color: #FFFFFF
+  margin: auto
+  max-width: 1380px
+  background-color: #FFFFFF
  
 
+@media screen and  (max-width: 1500px)
+  .content
+    padding: 20px 
+
+@media screen and  (max-width: 1000px)
+  .content
+    padding: 40px 0px
 .menuCardUpper
     background-color: #F5F4F2
     position: absolute
@@ -92,12 +102,7 @@ header
     
 
 
-.cardAll
-  display:  flex
-  flex-wrap: wrap
-  max-width: 1362px
-  padding-left: 280px
-  justify-content: space-between
+
   
 
 
@@ -109,12 +114,6 @@ header
   text-transform: uppercase
  
 
-.titleMenuBlock:after
-    content: ""
-    display: block
-    max-width: 363px
-    height: 3px
-    background-color: #000000
 
 .card
   font-family: 'Montserrat Alternates', sans-serif
@@ -123,9 +122,19 @@ header
   max-height: 454px
   margin-bottom: 36px
   border-radius: 30px
-
+  background-color: white
   box-shadow: (0px 0px 10px rgba(0, 0, 0, 0.25))
+  cursor: pointer
+@media screen and  (max-width: 1500px)
+  .card
+    margin-top: 36px
     
+    max-width: 280px
+    max-height: 350px
+    img
+      max-width: 260px
+      max-height: 170px
+
 .nameCard
   font-size: 26px
   padding-top: 21px
@@ -133,12 +142,17 @@ header
   word-wrap: break-word
   overflow-wrap: break-word
   max-width: 275px
-  
-
- 
+  min-height: 70px
+@media screen and  (max-width: 1500px)
+  .nameCard
+    font-size: 22px
+    padding-bottom: 5px 
 .vCard
   font-size: 16px
   padding-bottom: 15px
+@media screen and  (max-width: 1500px)
+  .vCard
+    padding-bottom: 15px
 
 .imgCard
   height: 195px
@@ -152,7 +166,10 @@ header
   background-color: #F4DDD3
   cursor: pointer
   transition: 0.5s
-  
+@media screen and  (max-width: 1500px)
+  .infoCard  
+    width: 260px
+    height: 50px
 
 
 
@@ -162,7 +179,9 @@ header
   padding-top: 15px
   font-size: 25px
   font-weight: bold
-  
+@media screen and  (max-width: 1500px)   
+  .CardPrice
+    font-size: 20px
 
 .infoCard:hover
   background-color: #a57763
@@ -189,95 +208,22 @@ header
   background: #7c7373
 
 
-
+//Заголовок опции 
+.titleOption 
+  text-align: center
+  font-family: "Russo One", sans-serif
+  font-size: 50px
+  margin: auto
+  width: 211px
+  height: 61px
+  background-color: #D4D8B8
+  margin-bottom: 36px
+  margin-top: 55px
 
  
-.drawer
-  color: black
-  width: 1000px
-  height: 500px
-  background-color: white
-  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1)
-  position: absolute
-
-.cartItems
-  position: relative
-  display: flex
-  justify-content: space-between
-  margin: 100px 100px
-
-.btnPopUp
-  color: purple
-  height: 35px
-  width: 40px
-  border: none
-  margin-left: 70px
-  border-radius: 30px
-  font-size: 30px
-  transition:    transform .8s ease-in-out
-  background: transparent
-  cursor: pointer
- 
-
-.btnPopUp:hover
-  transform: rotate(90deg)
-
-.imgPopUp
-    display: block
-    width: 100%
-    height: auto
-
-.textPopUp
-    width: 50% 
-    margin: 0 65px
- 
-  
-
-.btnMenu, .btnMenuActive
-    display: inline-block
-    vertical-align: top
-    padding: 15px 31px
-    font-size: 30px
-    margin-right: 18px
-    border: none
-    background-color: #FFFFFF
-    color: black
-    text-transform: uppercase
-    text-decoration: none
-    font-family: 'Montserrat', sans-serif
-    transition: background .1s linear, color .1s linear
-    cursor: pointer
-    
-.btnMenuActive
-       background-color: #70715A
-       color: white
-       font-weight: 700
-       font-style: bold
-
-.btnMenu:hover 
-    color: black
-    background-color: #C6C6BD
-
-.fruitMenu
-  display: block
-
-
-
-
-.sliderMenu
-  margin-left: 18px
-
-.sliderMenu:after
-    content: ""
-    margin-left: -18px
-    display: block
-    width: 100%
-    height: 3px
-    background-color: #000000
-   
-
-.infoMenu
-  width: 1360px
+//Содержимое опций
+.itemOption
+  max-width: 1360px
   height: 323px
   background-color: #F4EEE8
   border-radius: 88px
@@ -285,30 +231,395 @@ header
   font-family: 'Montserrat Alternates', sans-serif
   padding-right: 10px
 
+.nameOption
+  font-size: 24px
+  bottom: 22px
 
+.textOptions
+  font-size: 20px
+  display: block
+  padding-top: 20px
 
-  
-  
-  
-.infoMenuCard1, .infoMenuCard2, .infoMenuCard3
+.optionFirstCol, .optionSecondCol 
   display: inline-table
   margin-top: 25px
 
-
-
-.infoMenuCard1
+.optionFirstCol 
   width: 328px
-  padding-left: 100px
+  padding-left: 122px
   margin-right: 70px
 
-.infoMenuCard2
+.optionSecondCol 
   width: 404px
   margin-right: 103px
 
-.infoMenuCard3
+.optionTemp 
+  margin-top: 31px
+
+.optionTopping 
+  margin-top: 55px
+
+.optionThirdCol 
   width: 243px
   padding-right: 94px
+  display: inline-table
+  position: absolute
+  margin-top: 81px
 
+.OptionCard 
+  display: inline-flex
+
+.imgOption 
+  padding-top: 16px
+  padding-right: 24px
+
+
+
+@media screen and  (max-width: 1500px)
+  .titleOption 
+    font-size: 40px
+    width: 206px
+    height: 55px
+  .optionFirstCol 
+    margin-left: -20px
+  .optionThirdCol 
+    max-width: 243px
+    display: inline-table
+    position: absolute
+    margin-top: 81px
+    padding-right: 10px
+    margin-left: -50px
+
+@media screen and  (max-width: 1000px)
+  .itemOption
+    border-radius: 0px
+  .titleOption 
+    font-size: 40px
+  .nameOption
+    font-size: 20px
+  .textOptions
+    font-size: 16px
+  .optionFirstCol 
+    max-width: 328px
+    padding-left: 30px
+    margin-right: -10px
+  .optionSecondCol 
+    max-width: 404px
+    margin-right: -20px
+  .optionThirdCol 
+    max-width: 243px
+    display: inline-table
+    position: absolute
+    margin-top: 81px
+    margin-left: 0px
+
+
+//Поп-ап
+.drawer
+  font-family: 'Montserrat Alternates', sans-serif
+  color: black
+  max-width: 1400px
+  max-height: 751px
+  background-color: white
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1)
+  position: relative
+  margin: 100px auto
+  border-radius: 66px
+  padding: 10px
+  img
+    max-width: auto
+    width: 598px
+    height: 552px
+    border-radius: 30px
+@media screen and  (max-width: 1500px)
+  .drawer
+    margin: 30px
+    img
+      width: 500px
+      height: 400px
+@media screen and  (max-width: 1000px)
+  .drawer
+    margin-top: 50px
+    img
+      width: 414px
+      height: 382px
+@media screen and  (max-width: 500px)
+  .drawer
+    border-radius: 48px
+    margin: 5px
+    margin-top: 15px
+    max-width: 400px
+    max-height: 912px
+    img
+      
+      width: auto
+      height: auto
+      margin: 0px
+      margin-top: -30px
+
+
+.overlay
+    width: 100%
+    min-height: 100%
+    background-color: #000000ec
+    overflow: hidden
+    position: fixed
+    top: 0px
+
+
+
+.cartItems
+  position: relative
+  display: flex
+  justify-content: space-between
+  margin: 100px 100px
+@media screen and  (max-width: 1500px)
+  .cartItems
+      margin: 50px 70px
+@media screen and  (max-width: 500px)
+    .cartItems
+      flex-direction: column
+ 
+
+.textPopUp
+    max-width: 552px
+    margin: 0 65px
+@media screen and  (max-width: 1500px)
+  .textPopUp
+    max-width: 415px
+    margin: 0 50px
+@media screen and  (max-width: 1000px)
+  .textPopUp
+    max-width: 552px
+@media screen and  (max-width: 500px)
+  .textPopUp
+    max-width: 415px
+    margin: 0 
+    margin-right: -45px
+    margin-left: -45px
+    margin-bottom: -30px
+    margin-top: 10px
+
+.btnPopUpClose
+  color: #383838
+  height: 35px
+  width: 40px
+  border: none
+  margin-left: -100px
+  border-radius: 30px
+  margin-top: -50px
+  font-size: 30px
+  transition:    transform .8s ease-in-out
+  background: transparent
+  cursor: pointer
+@media screen and  (max-width: 1500px)
+  .btnPopUpClose
+      margin-top: -50px
+@media screen and  (max-width: 500px)
+  .btnPopUpClose
+    position: absolute
+    margin-left: 280px
+    margin-top: -40px
+
+
+
+
+.btnPopUpClose:hover
+  transform: rotate(90deg)
+
+.PopUpName
+  font-size: 32px
+  margin-bottom: 36px
+@media screen and  (max-width: 1500px)
+  .PopUpName
+    font-size: 28px
+    margin-bottom: 26px
+@media screen and  (max-width: 1000px)
+    .PopUpName
+      font-size: 24px
+      margin-bottom: 25px
+@media screen and  (max-width: 500px)
+    .PopUpName
+      font-size: 22px
+      margin-bottom: 25px
+
+
+.PopUpMl
+  font-size: 16px
+  margin-bottom: 18px
+@media screen and  (max-width: 1000px)
+  .PopUpMl
+    font-size: 14px
+    margin-bottom: 12px
+@media screen and  (max-width: 500px)
+  .PopUpMl
+    font-size: 14px
+    margin-bottom: 12px
+@media screen and  (max-width: 500px)
+  .PopUpMl
+    font-size: 14px
+    margin-bottom: 10px
+
+.PopUpPrice
+  font-size: 25px
+  font-weight: 700
+  font-style: bold
+  margin-bottom: 46px
+@media screen and  (max-width: 1500px)
+  .PopUpPrice
+    font-size: 20px
+    margin-bottom: 36px
+@media screen and  (max-width: 1000px)
+  .PopUpPrice
+    font-size: 20px
+    margin-bottom: 24px
+@media screen and  (max-width: 500px)
+  .PopUpPrice
+    font-size: 20px
+    margin-bottom: 18px
+
+
+.PopUpInfa
+  font-size: 24px
+  margin-bottom: 50px
+@media screen and  (max-width: 1500px)
+  .PopUpInfa
+    font-size: 20px
+    margin-bottom: 40px
+@media screen and  (max-width: 1000px)
+  .PopUpInfa
+    font-size: 16px
+    margin-bottom: 34px
+@media screen and  (max-width: 500px)
+  .PopUpInfa
+    font-size: 16px
+    margin-bottom: 25px
+
+
+.PopUpSostav
+  font-size: 24px
+@media screen and  (max-width: 1500px)
+  .PopUpSostav
+    font-size: 20px
+@media screen and  (max-width: 1000px)
+  .PopUpSostav
+    font-size: 16px
+
+//Кнопки сортировки
+.btnMenu, .btnMenuActive
+  display: inline-block
+  vertical-align: top
+  padding: 15px 31px
+  font-size: 30px
+  margin-right: 18px
+  border: none
+  background-color: #FFFFFF
+  color: black
+  text-transform: uppercase
+  text-decoration: none
+  font-family: 'Montserrat', sans-serif
+  transition: background .1s linear, color .1s linear
+  cursor: pointer
+
+@media screen and  (max-width: 1500px)
+  .btnMenu, .btnMenuActive
+    font-size: 27px
+    padding: 15px 23px
+    margin-left: 18px 
+
+@media screen and  (max-width: 1000px)
+  .btnMenu, .btnMenuActive
+    font-size: 20px
+    padding: 15px 15px
+    margin-left: 18px
+
+
+.btnMenuActive
+  background-color: #70715A
+  color: white
+  font-weight: 700
+  font-style: bold
+
+.btnMenu:hover 
+  color: black
+  background-color: #C6C6BD
+
+//Черта под кнопками
+.line
+  content: ""
+  margin-left: -18px
+  display: block
+  width: 100%
+  height: 3px
+  background-color: #000000
+@media screen and  (max-width: 1500px)
+  .line
+    margin-left: 0px
+//Фон меню с карточками
+.menuUpper
+  background-color: #F5F4F2
+  position: absolute
+  left: 0
+  right: 0
+
+//Карточки на фоне
+.cardAll
+  display:  flex
+  flex-wrap: wrap
+  margin-top: 65px
+  max-width: 1380px
+  margin: auto
+  padding: 30px
+  justify-content: space-between  
+@media screen and  (max-width: 1500px)
+  .cardAll
+    padding: 40px
+@media screen and  (max-width: 1000px)
+  .cardAll
+    padding: 0px
+    min-width: 100%
+
+//Слайдер
+.slider
+  max-height: 455px
+  max-width: 1360px
+  display:  flex
+  align-items:  center
+  img
+    min-width: 100%
+@media screen and  (max-width: 1500px)
+  .slider
+      img
+        min-width: 100%
+
+.WindowSlider
+  height: 100%
+  width: 100%
+  overflow:  hidden
+
+.ItemSlider
+  height: 100%
+  display: flex
+  width: 100%
+  img
+    width: 1360px
+    
+.ArrowSlider
+  cursor: pointer
+  font-size: 30px
+  height: 44px
+  width: 27px
+  color: rgb(165, 147, 147)
+
+.SliderArLeft
+  position: absolute
+  margin-left: 16px
+
+.SliderArRight
+  margin-left: -50px
+
+
+ 
 
 
 .titleMenu
@@ -337,58 +648,3 @@ header
     background-color: #D4D8B8
     margin-bottom: 36px
 
-
-
-.top_menu
-  display: inline-block
-  list-style: none
-  padding-left: 0
-  margin: 0
-
-.top_menu > li
-  display: inline-block 
-  position: relative
-
-.top_menu > li > a
-  display: inline-block
-  color: inherit
-  text-decoration: none
-  transition: background-color 0.25s, color 0.15s
-
-
-.top_menu > li:hover > ul a
-  opacity: 1
-  height: 30px
-  padding: 10px
-  transition: height 0.3s, opacity 0.4s
-
-.top_menu > li:hover > ul li
-  height: 40px
-  opacity: 1
-
-.inner_menu
-  position: absolute
-  top: 100%
-  left: 0
-  list-style: none
-  padding-left: 0
-  text-align: left
-  margin: 0
-
-.inner_menu > li
-  height: 0
-  opacity: 0
-  transition: height 0.3s, opacity 0.4s
-
-.inner_menu > li > a
-  width: 100%
-  text-decoration: none
-  overflow: hidden
-  opacity: 0
-  transition: height 0.4s, opacity 0.5s
-
-.top_menu > li > ul a 
-  height: 0
-  margin: 0
-  padding: 0
-  transition: height 0.3s, opacity 0.4s, padding 3s linear

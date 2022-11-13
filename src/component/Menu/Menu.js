@@ -1,228 +1,93 @@
-import { Routes, Route, Link } from "react-router-dom";
-import FruitCard from "./FruitCard";
-import FrappeCard from "./FrappeCard";
-import React, { useEffect, setState, useState } from "react";
-import PopUp from "../PopUp";
-
-function Menu(props) {
-  const arrFruit = [
-    {
-      name: "Гранатовый браслет",
-      price1: 263,
-      price2: 283,
-      imageUrl: require("./menu/1.png"),
-    },
-    {
-      name: "Румяный личи ",
-      price1: 213,
-      price2: 283,
-      imageUrl: require("./menu/2.png"),
-    },
-    {
-      name: "Киви изобилие",
-      price1: 163,
-      price2: 183,
-      imageUrl: require("./menu/3.png"),
-    },
-    {
-      name: "Жаркие тропики",
-      price1: 263,
-      price2: 283,
-      imageUrl: require("./menu/4.png"),
-    },
-    {
-      name: "Манго-маракуйа",
-      price1: 263,
-      price2: 283,
-      imageUrl: require("./menu/5.png"),
-    },
-  ];
-
-  const arrFrapp = [
-    {
-      name: "Название Название",
-      price1: 263,
-      price2: 283,
-      imageUrl: require("./menu/1.png"),
-    },
-    {
-      name: "Название Название1",
-      price1: 263,
-      price2: 283,
-      imageUrl: require("./menu/2.png"),
-    },
-    {
-      name: "Название Название",
-      price1: 263,
-      price2: 283,
-      imageUrl: require("./menu/5.png"),
-    },
-  ];
-
-  const category = [
-    "Все меню",
-    "Фруктовые чаи",
-    "Молочные чаи",
-    "Фраппе",
-    "Кофе",
-  ];
-
-  /* Функция для вызова категории меню  */
-  const [activeIndex, setActiveIndex] = React.useState(0);
-  const onClickMenu = (index) => {
-    setActiveIndex(index);
+import Button from "./Button";
+import Carusel from "./Carusel";
+import PopUp  from './PopUp';
+import React from "react";
+import MenuCard from "./MenuCard"
+function Menu() {
+  const [buttonIndex, setButtonIndex] = React.useState(0);
+  const [items, setItems] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(true);
+  
+  React.useEffect(()=>{
+    setIsLoading(true);
+    fetch('https://636cf0c1ab4814f2b273204d.mockapi.io/items?category=' + buttonIndex)
+    .then((res)=>res.json())
+    .then((arr)=> {
+      setItems(arr);
+      setIsLoading(false)
+    });
+    window.scrollTo(0,700)
+  }, [buttonIndex])
+  const[menuItems, setMenuItems]=React.useState([]);
+  const[cartOpened, setCartOpened] = React.useState(false);
+  const onAddToPopUp=(obj)=>{
+    setMenuItems((prev)=>[...prev, obj])
   };
+  const onRemoveItem =(name) => {
+    setMenuItems((prev)=>prev.filter(menuItems=>menuItems.name!==name))
+  }
 
-  const [categoryId, setCategoryId] = React.useState(0);
+return (
+  <div className="content">
 
-  const [menuItems, setMenuItems] = React.useState([]);
-  const [cartOpened, setCartOpened] = React.useState(false);
-  const onAddToPopUp = (obj) => {
-    setMenuItems((prev) => [...prev, obj]);
-  };
-
-  const onRemoveItem = (name) => {
-    setMenuItems((prev) => prev.filter((menuItems) => menuItems.name !== name));
-  };
-
-  const [show, setShow] = useState(false);
-
-  return (
-    <div className="menuCard">
-      <div className="slider">
-        <div className="banner">
-          <img src="http://placekitten.com/g/1360/455" alt="1.jpg"></img>
+    <div className="carusel">
+      <Carusel  
+        imgs={[ 
+          require('./menu/баннер.png'),
+          require('./menu/баннер.png'),
+          require('./menu/3.png'),
+        ]} 
+      />
+    </div>          
+    <div className='titleOption'>Опции</div>
+    <div className="itemOption">
+      <div className="optionFirstCol">
+        <div className="nameOption" >Объем</div>
+        <div className="OptionCard">
+          <img className='imgOption' src={require('./menu/cup.png')} alt="1.jpg"></img>
+          <div className="textOptions" style={{ paddingTop: "40px" }} >500 мл / 100 мл</div>
         </div>
-
-        <div className="titleMenuCard">Опции</div>
-
-        <div className="infoMenu">
-          <div className="infoMenuCard1">
-            <div className="titleMenu">Объем</div>
-            <div className="imgTextCard">
-              <img
-                className="imgCardMenu"
-                src="http://placekitten.com/g/71/68"
-                alt="1.jpg"
-              ></img>
-              <div className="intoMenu">500 мл / 100 мл</div>
+        <div className="optionTemp">
+          <div className="nameOption">Температура</div>
+          <div className="OptionCard">
+            <img className='imgOption' src={require('./menu/temp.png')} alt="1.jpg"></img>
+            <div className="textOptions">холодный / теплый / горячий</div>
             </div>
-
-            <div className="titleMenu">Температура</div>
-            <div className="imgTextCard">
-              <img
-                className="imgCardMenu"
-                src="http://placekitten.com/g/71/71"
-                alt="1.jpg"
-              ></img>
-              <div className="intoMenu">холодный / теплый / горячий</div>
-            </div>
-          </div>
-
-          <div className="infoMenuCard2">
-            <div className="titleMenu">Сладость</div>
-            <div className="imgTextCard">
-              <img
-                className="imgCardMenu"
-                src="http://placekitten.com/g/71/36"
-                alt="1.jpg"
-              ></img>
-              <div className="intoMenu">0% / 25% / 50% / 75% / 100%</div>
-            </div>
-
-            <div className="titleMenu">Топпинг</div>
-            <div className="imgTextCard">
-              <img
-                className="imgCardMenu"
-                src="http://placekitten.com/g/71/36"
-                alt="1.jpg"
-              ></img>
-              <div className="intoMenu">
-                тапиока / тапиока-желе / пуддинг / сырная пенка
-              </div>
-            </div>
-          </div>
-
-          <div className="infoMenuCard3">
-            <div className="titleMenu">Альтернативное молоко +40₽</div>
-            <div className="imgTextCard">
-              <img
-                className="imgCardMenu"
-                src="http://placekitten.com/g/50/80"
-                alt="1.jpg"
-              ></img>
-              <div className="intoMenu">кокосовое / соевое / миндальное</div>
-            </div>
-          </div>
-        </div>
+        </div> 
       </div>
-      <div className="sliderMenu">
-        {category.map((value, i) => (
-          <button
-            key={i}
-            onClick={() => onClickMenu(i)}
-            className={activeIndex == i ? "btnMenuActive" : "btnMenu"}
-          >
-            {value}
-          </button>
-        ))}
+      <div className="optionSecondCol">
+        <div className="nameOption">Сладость</div>
+        <div className="OptionCard">
+          <img className='imgOption' src={require('./menu/lozka.png')} alt="1.jpg"></img>
+          <div className="textOptions" style={{ paddingTop: "30px" }}>0% / 25% / 50% / 75% / 100%</div>
+          </div>
+          <div className="optionTopping">
+            <div className="nameOption">Топпинг</div>
+            <div className="OptionCard">
+              <img className='imgOption' src={require('./menu/shar.png')} alt="1.jpg"></img>
+              <div className="textOptions">тапиока / тапиока-желе / пуддинг / сырная пенка</div>
+            </div>
+          </div> 
       </div>
-
-      <div className="menuCardUpper">
-        <div className="fruitMenu">
-          {cartOpened && (
-            <PopUp
-              items={menuItems}
-              onClose={() => setCartOpened(false)}
-              onRemove={onRemoveItem}
-            />
-          )}
-          <div className="titleMenuBlock">Фруктовые чаи</div>
-          <div className="cardAll">
-            <Routes>
-              <Route
-                path="/"
-                element={arrFruit.map((item, i) => (
-                  <FruitCard
-                    {...item}
-                    index={i}
-                    onClickCard={(obj) => onAddToPopUp(item)}
-                    onClick1={() => setCartOpened(true)}
-                  />
-                ))}
-                exact
-              />
-            </Routes>
-          </div>
-        </div>
-
-        <div className="frappeMenu">
-          {cartOpened && (
-            <PopUp
-              onClose={() => setCartOpened(false)}
-              onRemove={onRemoveItem}
-            />
-          )}
-          <div className="titleMenuBlock">Фраппе</div>
-          <div className="cardAll">
-            <Routes>
-              <Route
-                path="/"
-                element={arrFrapp.map((item) => (
-                  <FrappeCard
-                    {...item}
-                    onClickCard={(obj) => onAddToPopUp(item)}
-                    onClick1={() => setCartOpened(true)}
-                  />
-                ))}
-                exact
-              />
-            </Routes>
-          </div>
+      <div className="optionThirdCol">
+        <div className="nameOption">Альтернативное молоко +40₽</div>
+        <div className="OptionCard">
+          <img className='imgOption' src={require('./menu/milk.png')} alt="1.jpg"></img>
+          <div className="textOptions">кокосовое / соевое / миндальное</div>
         </div>
       </div>
     </div>
-  );
-}
+    <Button value={buttonIndex} onClickCategory={(i) => setButtonIndex(i)} />
+    <div className="line"></div>
+    <div className="menuUpper">
+      {cartOpened && <PopUp items={menuItems} onClose={() => setCartOpened(false)} onRemove={onRemoveItem}   /> } 
+      <div className="cardAll">
+        {items.map((obj) => (
+          <MenuCard key={obj.id} {...obj} onClickCard={(ob) => onAddToPopUp(obj) }  onClick1={() => setCartOpened(true) } />
+        ))}   
+      </div>
+    </div>
 
+  </div>
+);}
 export default Menu;

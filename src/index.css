@@ -1,6 +1,7 @@
 body {
   margin: 0 auto;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .link {
@@ -26,14 +27,17 @@ header {
 header img {
   margin-right: 15px;
 }
-header h3, header p {
+header h3,
+header p {
   margin: 0;
 }
 header .headerLeft {
   display: flex;
   align-items: center;
 }
-header li, header ul, header .icon_down {
+header li,
+header ul,
+header .icon_down {
   list-style-type: none;
   display: inline;
 }
@@ -55,14 +59,14 @@ header .icon_down {
 
 .menu_link {
   padding: 10px;
-  background-color: #F4EFEB;
+  background-color: #f4efeb;
   color: #111111;
   text-decoration: none;
   display: block;
   font-family: "Montserrat", sans-serif;
   font-size: 22px;
   height: 30px;
-  border-top: 1px solid #9A6F5C;
+  border-top: 1px solid #9a6f5c;
   line-height: 30px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
@@ -73,24 +77,29 @@ header .icon_down {
 
 .content {
   padding: 40px 282px;
+  margin: auto;
+  max-width: 1380px;
+  background-color: #ffffff;
 }
 .content h1 {
   margin: 0;
 }
 
+@media screen and (max-width: 1500px) {
+  .content {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .content {
+    padding: 40px 0px;
+  }
+}
 .menuCardUpper {
-  background-color: #F5F4F2;
+  background-color: #f5f4f2;
   position: absolute;
   left: 0;
   right: 0;
-}
-
-.cardAll {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1362px;
-  padding-left: 280px;
-  justify-content: space-between;
 }
 
 .titleMenuBlock {
@@ -101,14 +110,6 @@ header .icon_down {
   text-transform: uppercase;
 }
 
-.titleMenuBlock:after {
-  content: "";
-  display: block;
-  max-width: 363px;
-  height: 3px;
-  background-color: #000000;
-}
-
 .card {
   font-family: "Montserrat Alternates", sans-serif;
   padding: 20px;
@@ -116,9 +117,22 @@ header .icon_down {
   max-height: 454px;
   margin-bottom: 36px;
   border-radius: 30px;
+  background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
+@media screen and (max-width: 1500px) {
+  .card {
+    margin-top: 36px;
+    max-width: 280px;
+    max-height: 350px;
+  }
+  .card img {
+    max-width: 260px;
+    max-height: 170px;
+  }
+}
 .nameCard {
   font-size: 26px;
   padding-top: 21px;
@@ -126,13 +140,25 @@ header .icon_down {
   word-wrap: break-word;
   overflow-wrap: break-word;
   max-width: 275px;
+  min-height: 70px;
 }
 
+@media screen and (max-width: 1500px) {
+  .nameCard {
+    font-size: 22px;
+    padding-bottom: 5px;
+  }
+}
 .vCard {
   font-size: 16px;
   padding-bottom: 15px;
 }
 
+@media screen and (max-width: 1500px) {
+  .vCard {
+    padding-bottom: 15px;
+  }
+}
 .imgCard {
   height: 195px;
   width: 279px;
@@ -143,11 +169,17 @@ header .icon_down {
   width: 279px;
   height: 63px;
   border-radius: 22px;
-  background-color: #F4DDD3;
+  background-color: #f4ddd3;
   cursor: pointer;
   transition: 0.5s;
 }
 
+@media screen and (max-width: 1500px) {
+  .infoCard {
+    width: 260px;
+    height: 50px;
+  }
+}
 .CardPrice {
   text-align: center;
   color: #000;
@@ -156,11 +188,17 @@ header .icon_down {
   font-weight: bold;
 }
 
+@media screen and (max-width: 1500px) {
+  .CardPrice {
+    font-size: 20px;
+  }
+}
 .infoCard:hover {
   background-color: #a57763;
 }
 
-.button, .btn {
+.button,
+.btn {
   background: #dddbdb;
   border: 1px solid #2926cf;
   box-sizing: border-box;
@@ -174,17 +212,191 @@ header .icon_down {
   cursor: pointer;
 }
 
-.button:hover, .btn:hover {
+.button:hover,
+.btn:hover {
   background: #7c7373;
 }
+.titleOption {
+  text-align: center;
+  font-family: "Russo One", sans-serif;
+  font-size: 50px;
+  margin: auto;
+  width: 211px;
+  height: 61px;
+  background-color: #d4d8b8;
+  margin-bottom: 36px;
+  margin-top: 55px;
+}
 
+.itemOption {
+  max-width: 1360px;
+  height: 323px;
+  background-color: #f4eee8;
+  border-radius: 88px;
+  margin-bottom: 100px;
+  font-family: "Montserrat Alternates", sans-serif;
+  padding-right: 10px;
+}
+
+.nameOption {
+  font-size: 24px;
+  bottom: 22px;
+}
+
+.textOptions {
+  font-size: 20px;
+  display: block;
+  padding-top: 20px;
+}
+
+.optionFirstCol,
+.optionSecondCol {
+  display: inline-table;
+  margin-top: 25px;
+}
+
+.optionFirstCol {
+  width: 328px;
+  padding-left: 122px;
+  margin-right: 70px;
+}
+
+.optionSecondCol {
+  width: 404px;
+  margin-right: 103px;
+}
+
+.optionTemp {
+  margin-top: 31px;
+}
+
+.optionTopping {
+  margin-top: 55px;
+}
+.optionThirdCol {
+  width: 243px;
+  padding-right: 94px;
+  display: inline-table;
+  position: absolute;
+  margin-top: 81px;
+}
+
+.OptionCard {
+  display: inline-flex;
+}
+
+.imgOption {
+  padding-top: 16px;
+  padding-right: 24px;
+}
+
+@media screen and (max-width: 1500px) {
+  .titleOption {
+    font-size: 40px;
+    width: 206px;
+    height: 55px;
+  }
+  .optionFirstCol {
+    margin-left: -20px;
+  }
+  .optionThirdCol {
+    max-width: 243px;
+    display: inline-table;
+    position: absolute;
+    margin-top: 81px;
+    padding-right: 10px;
+    margin-left: -50px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .itemOption {
+    border-radius: 0px;
+  }
+  .titleOption {
+    font-size: 40px;
+  }
+  .nameOption {
+    font-size: 20px;
+  }
+  .textOptions {
+    font-size: 16px;
+  }
+  .optionFirstCol {
+    max-width: 328px;
+    padding-left: 30px;
+    margin-right: -10px;
+  }
+  .optionSecondCol {
+    max-width: 404px;
+    margin-right: -20px;
+  }
+  .optionThirdCol {
+    max-width: 243px;
+    display: inline-table;
+    position: absolute;
+    margin-top: 81px;
+    margin-left: 0px;
+  }
+}
 .drawer {
+  font-family: "Montserrat Alternates", sans-serif;
   color: black;
-  width: 1000px;
-  height: 500px;
+  max-width: 1400px;
+  max-height: 751px;
   background-color: white;
   box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-  position: absolute;
+  position: relative;
+  margin: 100px auto;
+  border-radius: 66px;
+  padding: 10px;
+}
+.drawer img {
+  max-width: auto;
+  width: 598px;
+  height: 552px;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 1500px) {
+  .drawer {
+    margin: 30px;
+  }
+  .drawer img {
+    width: 500px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .drawer {
+    margin-top: 50px;
+  }
+  .drawer img {
+    width: 414px;
+    height: 382px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .drawer {
+    border-radius: 48px;
+    margin: 5px;
+    margin-top: 15px;
+    max-width: 400px;
+    max-height: 912px;
+  }
+  .drawer img {
+    width: auto;
+    height: auto;
+    margin: 0px;
+    margin-top: -30px;
+  }
+}
+.overlay {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.9254901961);
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
 }
 
 .cartItems {
@@ -194,42 +406,187 @@ header .icon_down {
   margin: 100px 100px;
 }
 
-.btnPopUp {
-  color: purple;
+@media screen and (max-width: 1500px) {
+  .cartItems {
+    margin: 50px 70px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cartItems {
+    flex-direction: column;
+  }
+}
+.textPopUp {
+  max-width: 552px;
+  margin: 0 65px;
+}
+@media screen and (max-width: 1500px) {
+  .textPopUp {
+    max-width: 415px;
+    margin: 0 50px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .textPopUp {
+    max-width: 552px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .textPopUp {
+    max-width: 415px;
+    margin: 0;
+    margin-right: -45px;
+    margin-left: -45px;
+    margin-bottom: -30px;
+    margin-top: 10px;
+  }
+}
+.btnPopUpClose {
+  color: #383838;
   height: 35px;
   width: 40px;
   border: none;
-  margin-left: 70px;
+  margin-left: -100px;
   border-radius: 30px;
+  margin-top: -50px;
   font-size: 30px;
   transition: transform 0.8s ease-in-out;
   background: transparent;
   cursor: pointer;
 }
-
-.btnPopUp:hover {
+@media screen and (max-width: 1500px) {
+  .btnPopUpClose {
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .btnPopUpClose {
+    position: absolute;
+    margin-left: 280px;
+    margin-top: -40px;
+  }
+}
+.btnPopUpClose:hover {
   transform: rotate(90deg);
 }
 
-.imgPopUp {
-  display: block;
-  width: 100%;
-  height: auto;
+.PopUpName {
+  font-size: 32px;
+  margin-bottom: 36px;
 }
 
-.textPopUp {
-  width: 50%;
-  margin: 0 65px;
+@media screen and (max-width: 1500px) {
+  .PopUpName {
+    font-size: 28px;
+    margin-bottom: 26px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .PopUpName {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .PopUpName {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+}
+.PopUpMl {
+  font-size: 16px;
+  margin-bottom: 18px;
 }
 
-.btnMenu, .btnMenuActive {
+@media screen and (max-width: 1000px) {
+  .PopUpMl {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .PopUpMl {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .PopUpMl {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+.PopUpPrice {
+  font-size: 25px;
+  font-weight: 700;
+  font-style: bold;
+  margin-bottom: 46px;
+}
+
+@media screen and (max-width: 1500px) {
+  .PopUpPrice {
+    font-size: 20px;
+    margin-bottom: 36px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .PopUpPrice {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .PopUpPrice {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+}
+.PopUpInfa {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1500px) {
+  .PopUpInfa {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .PopUpInfa {
+    font-size: 16px;
+    margin-bottom: 34px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .PopUpInfa {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}
+.PopUpSostav {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 1500px) {
+  .PopUpSostav {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .PopUpSostav {
+    font-size: 16px;
+  }
+}
+.btnMenu,
+.btnMenuActive {
   display: inline-block;
   vertical-align: top;
   padding: 15px 31px;
   font-size: 30px;
   margin-right: 18px;
   border: none;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: black;
   text-transform: uppercase;
   text-decoration: none;
@@ -238,8 +595,24 @@ header .icon_down {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1500px) {
+  .btnMenu,
+  .btnMenuActive {
+    font-size: 27px;
+    padding: 15px 23px;
+    margin-left: 18px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .btnMenu,
+  .btnMenuActive {
+    font-size: 20px;
+    padding: 15px 15px;
+    margin-left: 18px;
+  }
+}
 .btnMenuActive {
-  background-color: #70715A;
+  background-color: #70715a;
   color: white;
   font-weight: 700;
   font-style: bold;
@@ -247,18 +620,10 @@ header .icon_down {
 
 .btnMenu:hover {
   color: black;
-  background-color: #C6C6BD;
+  background-color: #c6c6bd;
 }
 
-.fruitMenu {
-  display: block;
-}
-
-.sliderMenu {
-  margin-left: 18px;
-}
-
-.sliderMenu:after {
+.line {
   content: "";
   margin-left: -18px;
   display: block;
@@ -267,35 +632,81 @@ header .icon_down {
   background-color: #000000;
 }
 
-.infoMenu {
+@media screen and (max-width: 1500px) {
+  .line {
+    margin-left: 0px;
+  }
+}
+.menuUpper {
+  background-color: #f5f4f2;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.cardAll {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 65px;
+  max-width: 1380px;
+  margin: auto;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1500px) {
+  .cardAll {
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .cardAll {
+    padding: 0px;
+    min-width: 100%;
+  }
+}
+.slider {
+  max-height: 455px;
+  max-width: 1360px;
+  display: flex;
+  align-items: center;
+}
+.slider img {
+  min-width: 100%;
+}
+
+@media screen and (max-width: 1500px) {
+  .slider img {
+    min-width: 100%;
+  }
+}
+.WindowSlider {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ItemSlider {
+  height: 100%;
+  display: flex;
+  width: 100%;
+}
+.ItemSlider img {
   width: 1360px;
-  height: 323px;
-  background-color: #F4EEE8;
-  border-radius: 88px;
-  margin-bottom: 100px;
-  font-family: "Montserrat Alternates", sans-serif;
-  padding-right: 10px;
 }
-
-.infoMenuCard1, .infoMenuCard2, .infoMenuCard3 {
-  display: inline-table;
-  margin-top: 25px;
+.ArrowSlider {
+  cursor: pointer;
+  font-size: 30px;
+  height: 44px;
+  width: 27px;
+  color: rgb(165, 147, 147);
 }
-
-.infoMenuCard1 {
-  width: 328px;
-  padding-left: 100px;
-  margin-right: 70px;
+.SliderArLeft {
+  position: absolute;
+  margin-left: 16px;
 }
-
-.infoMenuCard2 {
-  width: 404px;
-  margin-right: 103px;
-}
-
-.infoMenuCard3 {
-  width: 243px;
-  padding-right: 94px;
+.SliderArRight {
+  margin-left: -50px;
 }
 
 .titleMenu {
@@ -325,68 +736,6 @@ header .icon_down {
   margin-left: 573px;
   width: 211px;
   height: 61px;
-  background-color: #D4D8B8;
+  background-color: #d4d8b8;
   margin-bottom: 36px;
-}
-
-.top_menu {
-  display: inline-block;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.top_menu > li {
-  display: inline-block;
-  position: relative;
-}
-
-.top_menu > li > a {
-  display: inline-block;
-  color: inherit;
-  text-decoration: none;
-  transition: background-color 0.25s, color 0.15s;
-}
-
-.top_menu > li:hover > ul a {
-  opacity: 1;
-  height: 30px;
-  padding: 10px;
-  transition: height 0.3s, opacity 0.4s;
-}
-
-.top_menu > li:hover > ul li {
-  height: 40px;
-  opacity: 1;
-}
-
-.inner_menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  list-style: none;
-  padding-left: 0;
-  text-align: left;
-  margin: 0;
-}
-
-.inner_menu > li {
-  height: 0;
-  opacity: 0;
-  transition: height 0.3s, opacity 0.4s;
-}
-
-.inner_menu > li > a {
-  width: 100%;
-  text-decoration: none;
-  overflow: hidden;
-  opacity: 0;
-  transition: height 0.4s, opacity 0.5s;
-}
-
-.top_menu > li > ul a {
-  height: 0;
-  margin: 0;
-  padding: 0;
-  transition: height 0.3s, opacity 0.4s, padding 3s linear;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */

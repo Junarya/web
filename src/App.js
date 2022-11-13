@@ -1,7 +1,6 @@
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //<img src="http://placekitten.com/g/110/110" alt="1.jpg"></img>
 import React from "react";
-
 import Main from "./component/Main/Main";
 import Menu from "./component/Menu/Menu";
 import Header from "./component/Header";
@@ -34,6 +33,7 @@ function App() {
           }
         />
         <Route path="/menu" element={<Menu />} exact />
+     
       </Routes>
     </div>
   );
