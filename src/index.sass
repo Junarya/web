@@ -208,6 +208,8 @@ header
   height: 195px
   width: 279px
   border-radius: 30px
+  object-fit: cover
+  object-position: 50% 50%
 
 .infoCard
   width: 279px
@@ -373,26 +375,22 @@ header
   background-color: white
   box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1)
   position: relative
-  margin: 100px auto
+  margin: 130px auto
   border-radius: 66px
   padding: 10px
   img
-    max-width: auto
+    object-fit: cover
+    object-position: 50% 50%
     width: 598px
     height: 552px
     border-radius: 30px
 @media screen and  (max-width: 1500px)
   .drawer
     margin: 30px
+    margin-top: 110px
     img
       width: 500px
       height: 400px
-@media screen and  (max-width: 1000px)
-  .drawer
-    margin-top: 50px
-    img
-      width: 414px
-      height: 382px
 @media screen and  (max-width: 500px)
   .drawer
     border-radius: 48px
@@ -459,7 +457,7 @@ header
   border-radius: 30px
   margin-top: -50px
   font-size: 30px
-  transition:    transform .8s ease-in-out
+  transition:    transform .3s ease-in-out
   background: transparent
   cursor: pointer
 @media screen and  (max-width: 1500px)
