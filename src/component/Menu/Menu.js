@@ -35,7 +35,7 @@ function Menu() {
         <Carusel
           imgs={[
             require("./menu/баннер.png"),
-            require("./menu/баннер.png"),
+            require("./menu/2.png"),
             require("./menu/3.png")
           ]}
         />
