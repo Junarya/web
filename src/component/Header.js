@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import React from "react";
 
 function Header(props) {
@@ -16,17 +16,16 @@ function Header(props) {
   return (
     <div className="header_background">
       <header className="container">
-        <Link className="link" to="/">
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "PageActive" : "PageNotActive"
+          }
+          to="/"
+          end
+        >
           {" "}
           {/*   /  - переход на главную страницу*/}
-          <div
-            /*className="headerLeft"*/ onClick={() => onClickHeader(0)}
-            className={
-              activePage === 0
-                ? "headerLeft PageActive"
-                : "headerLeft PageNotActive"
-            }
-          >
+          <div className="headerLeft">
             <img
               className="imgName"
               src={require("./img/logo.png")}
@@ -38,22 +37,22 @@ function Header(props) {
               alt="name.jpg"
             />
           </div>
-        </Link>
+        </NavLink>
         <ul className="top_menu">
-          <li className="icon" /*onClick={props.onClickCard}*/>
-            <Link className="link" to="/">
-              {
-                <span
-                  onClick={() => onClickHeader(0)}
-                  className={activePage === 0 ? "PageActive" : "PageNotActive"}
-                >
-                  {LinkNames[0]}
-                </span>
+          <li className="icon">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "PageActive" : "PageNotActive"
               }
+              to="/"
+              end
+            >
+              {LinkNames[0]}
+
               <div className="icon_down">
                 <i class="fa-solid fa-chevron-down "></i>
               </div>
-            </Link>
+            </NavLink>
 
             <ul className="inner_menu">
               <li>
@@ -83,27 +82,23 @@ function Header(props) {
             </ul>
           </li>
 
-          <Link className="link" to="/menu">
-            <li className="icon" /*onClick={props.onClickCard}*/>
-              <span
-                onClick={() => onClickHeader(1)}
-                className={activePage === 1 ? "PageActive" : "PageNotActive"}
-              >
-                {LinkNames[1]}
-              </span>
-            </li>
-          </Link>
+          <NavLink
+            to="/menu"
+            className={({ isActive }) =>
+              isActive ? "PageActive" : "PageNotActive"
+            }
+          >
+            <li className="icon">{LinkNames[1]}</li>
+          </NavLink>
 
-          <Link className="link" to="/">
-            <li className="icon" /*onClick={props.onClickCard}*/>
-              <span
-                onClick={() => onClickHeader(2)}
-                className={activePage === 2 ? "PageActive" : "PageNotActive"}
-              >
-                {LinkNames[2]}
-              </span>
-            </li>
-          </Link>
+          <NavLink
+            to="/faq"
+            className={({ isActive }) =>
+              isActive ? "PageActive" : "PageNotActive"
+            }
+          >
+            <li className="icon">{LinkNames[2]}</li>
+          </NavLink>
         </ul>
       </header>
     </div>

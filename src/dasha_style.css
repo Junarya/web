@@ -239,10 +239,14 @@ li::marker {
 
 .PageActive {
   font-weight: bold;
+  text-decoration: none;
+  color: black;
 }
 
 .PageNotActive {
   font-weight: normal;
+  text-decoration: none;
+  color: black;
 }
 
 .menu_btn {

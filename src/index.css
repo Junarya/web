@@ -221,6 +221,10 @@ header .icon_down {
   height: 195px;
   width: 279px;
   border-radius: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 
 .infoCard {
@@ -403,12 +407,15 @@ header .icon_down {
   background-color: white;
   box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
   position: relative;
-  margin: 100px auto;
+  margin: 130px auto;
   border-radius: 66px;
   padding: 10px;
 }
 .drawer img {
-  max-width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
   width: 598px;
   height: 552px;
   border-radius: 30px;
@@ -417,19 +424,11 @@ header .icon_down {
 @media screen and (max-width: 1500px) {
   .drawer {
     margin: 30px;
+    margin-top: 110px;
   }
   .drawer img {
     width: 500px;
     height: 400px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .drawer {
-    margin-top: 50px;
-  }
-  .drawer img {
-    width: 414px;
-    height: 382px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -508,7 +507,7 @@ header .icon_down {
   border-radius: 30px;
   margin-top: -50px;
   font-size: 30px;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   background: transparent;
   cursor: pointer;
 }
