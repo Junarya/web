@@ -9,7 +9,6 @@ import { useRef } from "react";
 import ScrollToTopBtn from "./component/TopBtn";
 
 function App() {
-  const [cartOpened, setCartOpened] = React.useState(false);
   const myRef = useRef(null);
   const myRef2 = useRef(null);
   const myRef3 = useRef(null);
@@ -20,7 +19,6 @@ function App() {
         refProp1={myRef}
         refProp2={myRef2}
         refProp3={myRef3}
-        onClickCard={() => setCartOpened(true)}
       />
       <Routes>
         {/*  Ссылки на другие страницы */}
