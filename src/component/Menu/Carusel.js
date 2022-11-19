@@ -14,8 +14,8 @@ export const Carusel = ({ imgs }) => {
 
   const hadleRightArrow = () => {
     console.log({ index });
-    if (index === imgs.length - 1) {
-      setIndex(0);
+    if (index === 0) {
+      setIndex(imgs.length - 1);
     } else {
       setIndex(index - 1);
     }
@@ -25,12 +25,12 @@ export const Carusel = ({ imgs }) => {
     setIndex(0);
   }, []);
 
-  useEffect(() => {
+  /* useEffect(() => {
     let slideInt = setInterval(() => {
       hadleLeftArrow();
     }, 3000);
     return () => clearInterval(slideInt);
-  }, [index]);
+  }); */
 
   return (
     <div className="slider">

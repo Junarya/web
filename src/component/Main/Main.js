@@ -7,6 +7,7 @@ import milk from "../img/main/milk.svg";
 import frappe from "../img/main/frappe.svg";
 import cofe from "../img/main/cofe.svg";
 import Graph from "./Graph";
+import video from "../img/main/video.mp4";
 
 import { motion } from "framer-motion";
 
@@ -95,7 +96,7 @@ function Main(props, ref) {
       >
         <motion.img
           variants={item_left}
-          src={require("../img/main/drink.png")}
+          src={require("../img/main/drinks1.png")}
           alt="напитки"
           className="drink"
         />
@@ -107,7 +108,7 @@ function Main(props, ref) {
         />
         <motion.img
           variants={item_right}
-          src={require("../img/main/drink.png")}
+          src={require("../img/main/drinks4.png")}
           alt="напитки"
           className="drink"
         />
@@ -115,20 +116,24 @@ function Main(props, ref) {
       <div id="about" className="o_nas_blok" ref={props.refProp1}>
         <div className="block-cent">
           <div className="headline">
-            <h1>O НАС</h1>
+            <h1 id="main">O НАС</h1>
           </div>
         </div>
         <div className="container o_nas_inside">
           <div className="o_nas_img">
-            <img src={require("../img/main/1 1.png")} alt="" className="col2" />
+            <img
+              src={require("../img/main/sky_tea.gif")}
+              alt=""
+              className="col2"
+            />
             <div className="col2 flex_img">
               <img
-                src={require("../img/main/image 21.png")}
+                src={require("../img/main/tapioka2.gif")}
                 alt=""
                 className="immg"
               />
               <img
-                src={require("../img/main/image 22.png")}
+                src={require("../img/main/green_drink.gif")}
                 alt=""
                 className="immg"
               />
@@ -166,18 +171,16 @@ function Main(props, ref) {
       <div className="ingridients">
         <div className="container ingridients_flex">
           <div className="col7">
-            <div>
+            <div className="items">
               {arrInfo.map((item) => (
                 <IngridientsBlock {...item} />
               ))}
             </div>
           </div>
-          <div className="col4">
-            <img
-              className="video"
-              src={require("../img/main/video.png")}
-              alt=""
-            />
+          <div className="col4 vid">
+            <video className="video" controls>
+              <source src={video} type="video/mp4" />
+            </video>
           </div>
         </div>
       </div>

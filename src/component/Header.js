@@ -9,10 +9,11 @@ function Header(props) {
   };
   const scrollDown = (ref) => {
     window.scrollTo({
-      top: ref.current.offsetTop - 110,
+      top: ref.current?.offsetTop - 80,
       behavior: "smooth"
     });
   };
+
   return (
     <div className="header_background">
       <header className="container">
@@ -54,10 +55,11 @@ function Header(props) {
               </div>
             </NavLink>
 
-            <ul className="inner_menu">
+            <ul className="inner_menu" id="kek">
               <li>
                 <Link
                   className="menu_link"
+                  to="/"
                   onClick={() => scrollDown(props.refProp1)}
                 >
                   О нас
@@ -67,6 +69,7 @@ function Header(props) {
                 <Link
                   className="menu_link"
                   onClick={() => scrollDown(props.refProp2)}
+                  to="/"
                 >
                   Напитки
                 </Link>
@@ -75,6 +78,7 @@ function Header(props) {
                 <Link
                   className="menu_link"
                   onClick={() => scrollDown(props.refProp3)}
+                  to="/"
                 >
                   Контакты
                 </Link>
