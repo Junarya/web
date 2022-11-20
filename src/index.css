@@ -711,6 +711,103 @@ header .icon_down {
   color: #695b5b;
 }
 
+.burger {
+  position: absolute;
+  right: 5%;
+  top: 19px;
+}
+
+.mobile ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 86px;
+  right: 0;
+  width: 100%;
+  background: #f4eee8;
+}
+.mobile ul li {
+  padding: 20px;
+  padding-left: 15%;
+}
+.mobile ul a li {
+  padding: 20px;
+  padding-left: 15%;
+}
+
+.mobile .top_menu {
+  border-top: 2px solid #7a6c6c;
+  box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.2);
+}
+.mobile .top_menu > li:hover > ul li {
+  height: 40px;
+}
+
+.mobile .top_menu > li > a {
+  text-decoration: none;
+}
+.mobile .top_menu {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.mobile .inner_menu {
+  position: unset;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  margin: 0;
+}
+.mobile .top_menu > li > ul a {
+  opacity: 1;
+  height: 30px;
+  padding: 10px;
+  transition: none;
+}
+.mobile .top_menu > li > ul li {
+  height: 40px;
+  opacity: 1;
+}
+.mobile .inner_menu > li {
+  height: 0;
+  opacity: 1;
+  transition: none;
+  display: block;
+  margin: 0;
+}
+.mobile .inner_menu > li > a {
+  width: 100%;
+  text-decoration: none;
+  overflow: hidden;
+  opacity: 1;
+  transition: none;
+}
+.mobile .top_menu > li > ul a {
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  transition: none;
+}
+.mobile ul li ul {
+  display: block;
+}
+.mobile ul li ul li {
+  padding: 0;
+}
+.mobile ul li ul .menu_link {
+  border-top: none;
+  box-shadow: none;
+}
+
+.mobile ul .inner_menu {
+  display: none;
+}
+.mobile .icon_down {
+  display: none;
+}
+
 .titleMenu {
   font-size: 24px;
   bottom: 22px;

@@ -607,6 +607,14 @@ li::marker {
     width: 351px;
   }
 }
+.mobile {
+  display: none;
+}
+
+.soc_link {
+  align-items: center;
+}
+
 @media screen and (max-width: 1000px) {
   .vid {
     height: 439px;
@@ -618,5 +626,12 @@ li::marker {
   }
   .items {
     margin: 30px 0;
+  }
+  .mobile {
+    display: block;
+    background: #fff;
+  }
+  .desktop {
+    display: none;
   }
 }/*# sourceMappingURL=dasha_style.css.map */

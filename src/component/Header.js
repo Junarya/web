@@ -1,12 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 import React from "react";
+import { Squash as Hamburger } from "hamburger-react";
 
 function Header(props) {
+  const [isOpen, setOpen] = React.useState(false);
+  const [enuOpen, setOpenMenu] = React.useState(false);
   const LinkNames = ["Главная", "Меню", "О нас"];
-  const [activePage, setActivePage] = React.useState(0);
-  const onClickHeader = (index) => {
-    setActivePage(index);
-  };
+  //const [activePage, setActivePage] = React.useState(0);
+  //const onClickHeader = (index) => {
+  //setActivePage(index);
+  //};
   const scrollDown = (ref) => {
     window.scrollTo({
       top: ref.current?.offsetTop - 80,
@@ -39,7 +42,7 @@ function Header(props) {
             />
           </div>
         </NavLink>
-        <ul className="top_menu">
+        <ul className="top_menu desktop">
           <li className="icon">
             <NavLink
               className={({ isActive }) =>
@@ -104,6 +107,83 @@ function Header(props) {
             <li className="icon">{LinkNames[2]}</li>
           </NavLink>
         </ul>
+        <div className="mobile">
+          <div className="burger" onClick={() => console.log("click")}>
+            <Hamburger color="#000" toggled={isOpen} toggle={setOpen} />
+          </div>
+          {isOpen && (
+            <ul className="top_menu ">
+              <li className="icon">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "PageActive" : "PageNotActive"
+                  }
+                  to="/"
+                  end
+                  onClick={() => setOpen(false)}
+                >
+                  {LinkNames[0]}
+
+                  <div className="icon_down">
+                    <i class="fa-solid fa-chevron-down "></i>
+                  </div>
+                </NavLink>
+
+                <ul className="inner_menu" id="kek">
+                  <li>
+                    <Link
+                      className="menu_link"
+                      to="/"
+                      onClick={() => scrollDown(props.refProp1)}
+                    >
+                      О нас
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="menu_link"
+                      onClick={() => scrollDown(props.refProp2)}
+                      to="/"
+                    >
+                      Напитки
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="menu_link"
+                      onClick={() => scrollDown(props.refProp3)}
+                      to="/"
+                    >
+                      Контакты
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="icon">
+                <NavLink
+                  onClick={() => setOpen(false)}
+                  to="/menu"
+                  className={({ isActive }) =>
+                    isActive ? "PageActive" : "PageNotActive"
+                  }
+                >
+                  {LinkNames[1]}
+                </NavLink>
+              </li>
+              <li className="icon">
+                <NavLink
+                  onClick={() => setOpen(false)}
+                  to="/faq"
+                  className={({ isActive }) =>
+                    isActive ? "PageActive" : "PageNotActive"
+                  }
+                >
+                  {LinkNames[2]}
+                </NavLink>
+              </li>
+            </ul>
+          )}
+        </div>
       </header>
     </div>
   );
