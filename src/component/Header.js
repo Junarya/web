@@ -3,13 +3,9 @@ import React from "react";
 import { Squash as Hamburger } from "hamburger-react";
 
 function Header(props) {
-  const [isOpen, setOpen] = React.useState(false);
-  const [enuOpen, setOpenMenu] = React.useState(false);
+  const [isOpen, setOpen] = React.useState(true);
+  const [menuOpen, setOpenMenu] = React.useState(false);
   const LinkNames = ["Главная", "Меню", "О нас"];
-  //const [activePage, setActivePage] = React.useState(0);
-  //const onClickHeader = (index) => {
-  //setActivePage(index);
-  //};
   const scrollDown = (ref) => {
     window.scrollTo({
       top: ref.current?.offsetTop - 80,
@@ -21,6 +17,7 @@ function Header(props) {
     <div className="header_background">
       <header className="container">
         <NavLink
+          onClick={() => setOpenMenu(true)}
           className={({ isActive }) =>
             isActive ? "PageActive" : "PageNotActive"
           }
@@ -45,6 +42,7 @@ function Header(props) {
         <ul className="top_menu desktop">
           <li className="icon">
             <NavLink
+              onClick={() => setOpenMenu(true)}
               className={({ isActive }) =>
                 isActive ? "PageActive" : "PageNotActive"
               }
@@ -52,44 +50,47 @@ function Header(props) {
               end
             >
               {LinkNames[0]}
-
-              <div className="icon_down">
-                <i class="fa-solid fa-chevron-down "></i>
-              </div>
+              {menuOpen && (
+                <div className="icon_down">
+                  <i class="fa-solid fa-chevron-down "></i>
+                </div>
+              )}
             </NavLink>
-
-            <ul className="inner_menu" id="kek">
-              <li>
-                <Link
-                  className="menu_link"
-                  to="/"
-                  onClick={() => scrollDown(props.refProp1)}
-                >
-                  О нас
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="menu_link"
-                  onClick={() => scrollDown(props.refProp2)}
-                  to="/"
-                >
-                  Напитки
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="menu_link"
-                  onClick={() => scrollDown(props.refProp3)}
-                  to="/"
-                >
-                  Контакты
-                </Link>
-              </li>
-            </ul>
+            {menuOpen && (
+              <ul className="inner_menu" id="kek">
+                <li>
+                  <Link
+                    className="menu_link"
+                    to="/"
+                    onClick={() => scrollDown(props.refProp1)}
+                  >
+                    О нас
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="menu_link"
+                    onClick={() => scrollDown(props.refProp2)}
+                    to="/"
+                  >
+                    Напитки
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="menu_link"
+                    onClick={() => scrollDown(props.refProp3)}
+                    to="/"
+                  >
+                    Контакты
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
 
           <NavLink
+            onClick={() => setOpenMenu(false)}
             to="/menu"
             className={({ isActive }) =>
               isActive ? "PageActive" : "PageNotActive"
@@ -103,6 +104,7 @@ function Header(props) {
             className={({ isActive }) =>
               isActive ? "PageActive" : "PageNotActive"
             }
+            onClick={() => setOpenMenu(false)}
           >
             <li className="icon">{LinkNames[2]}</li>
           </NavLink>
