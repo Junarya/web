@@ -28,7 +28,7 @@ function App() {
             <Main refProp1={myRef} refProp2={myRef2} refProp3={myRef3} />
           }
         />
-        <Route path="/menu" element={<Menu />} exact />
+        <Route path="/faq" element={<FAQ />} exact />
       </Routes>
     </div>
   );
