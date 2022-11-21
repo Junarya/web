@@ -6,7 +6,7 @@ import Vector1 from "./Vector1.svg"
 
 function Footer(){
     return(
-        <div className="container">
+        <div className="footer_container">
             <img className="left_leaf" src={Vector}></img>
             <div className="leftContainer">
                 <img className="panda" src={Panda} alt="1" />

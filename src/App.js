@@ -7,7 +7,8 @@ import Header from "./component/Header";
 import { Routes, Route } from "react-router-dom";
 import { useRef } from "react";
 import ScrollToTopBtn from "./component/TopBtn";
-
+import FAQ from "./component/FAQ/FAQ.jsx"
+import Footer from "./component/Footer/Footer";
 function App() {
   const myRef = useRef(null);
   const myRef2 = useRef(null);
@@ -28,9 +29,13 @@ function App() {
             <Main refProp1={myRef} refProp2={myRef2} refProp3={myRef3} />
           }
         />
+        <Route path="/menu" element={<Menu />} exact />
         <Route path="/faq" element={<FAQ />} exact />
+    
       </Routes>
+      <Footer/>
     </div>
+    
   );
 }
 
