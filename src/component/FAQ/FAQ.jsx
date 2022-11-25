@@ -34,7 +34,7 @@ function FAQ(){
                                     <div className={selected == i ? 'plus_active' : 'plus'}>+</div>
                             </div>
                             <div className={selected == i ? 'content_show' : 'faq_content'}>
-                                <img src={ item.image } alt="1"></img>
+                                <img className="faqPhoto" src={ item.image } alt="1"></img>
                                 <div>{item.answer}</div>
                             </div>
                         </div>
