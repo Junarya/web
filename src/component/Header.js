@@ -3,8 +3,8 @@ import React from "react";
 import { Squash as Hamburger } from "hamburger-react";
 
 function Header(props) {
-  const [isOpen, setOpen] = React.useState(true);
-  const [menuOpen, setOpenMenu] = React.useState(false);
+  const [isOpen, setOpen] = React.useState(false);
+  const [menuOpen, setOpenMenu] = React.useState(true);
   const LinkNames = ["Главная", "Меню", "О нас"];
   const scrollDown = (ref) => {
     window.scrollTo({
