@@ -10,7 +10,7 @@
     //margin-bottom: 40px;
 }
 .accordion{
-    width: 60%;
+    width: 75%;
     min-width: 600px;
 }
 .item{
@@ -49,11 +49,16 @@
     transition: all 0.5s;
     min-height: 1px;
     transform: translateX(0);
+    align-items: center;
+}
+.faqPhoto{
+    margin-right: 2%;
 }
 .plus{
     font-size: 40px;
     transition: all 0.5s ease 0s;
     margin-right: 2%;
+    border-radius: 50%;
     
 }
 .plus_active{
@@ -119,7 +124,7 @@
     .accordion{
         width: 90%;
         min-width: 100px;
-        margin-left: 6%;
+        margin-left: 0%;
     }
     .item{
         background-color: white;
@@ -152,6 +157,10 @@
         transition: all 0.5s;
         min-height: 1px;
         transform: translateX(0);
+        align-items: center;
+    }
+    .faqPhoto{
+        margin-right: 2%;
     }
     .plus{
         font-size: 40px;
@@ -183,7 +192,7 @@
         width: 100px;
         height: 70px;
         margin-bottom: 40px;
-        margin-left: 10%;
+        //margin-left: 10%;
         background-color: #D4D8B8;
         margin-top: 130px;
         .written_faq{
@@ -196,17 +205,17 @@
     .written{
         font-weight: 700;
         margin: 0 auto;
-        padding-left: 10%;
+        //padding-left: 10%;
     }
     .rightleaf{
         position: absolute;
-        right: -14%;
+        right: -15%;
         top: 10%;
         width: 230px;
     }
     .leftleaf{
         position: absolute;
-        left: -10%;
+        left: -15%;
         top: 10%;
         width: 230px;
     }
@@ -261,6 +270,10 @@
         transition: all 0.5s;
         min-height: 1px;
         transform: translateX(0);
+        align-items: center;
+    }
+    .faqPhoto{
+        margin-right: 2%;
     }
     .plus{
         font-size: 70px;

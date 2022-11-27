@@ -9,10 +9,6 @@ $fontsize: 12px;
     background-color: #383838;
     display: flex;
     justify-content: space-around;
-    max-width: 1920px;
-    min-width: 700px;
-    max-height: 150px;
-  
     align-items: center;
     .left_leaf{
       height: 90%;
@@ -144,7 +140,7 @@ $fontsize: 12px;
 
         }
     }
-    @media screen and(max-width: 800px ){
+    @media screen and(max-width: 1000px ){
       .footer_container{
         width: 100%;
         height: 150px;
@@ -152,9 +148,6 @@ $fontsize: 12px;
         background-color: #383838;
         display: flex;
         justify-content: space-around;
-        max-width: 1920px;
-        min-width: 700px;
-        max-height: 150px;
       
         align-items: center;
         .left_leaf{
@@ -179,11 +172,11 @@ $fontsize: 12px;
                 color: $footercolor;
                 padding-top: 15px;
                 font-family: $fontfam;
-                font-size: 10px;
+                font-size: 8px;
                 z-index: 1;
                 .panda{
-                    width: 65px;
-                    height: 65px;
+                    width: 50px;
+                    height: 50px;
                     border-radius: 50%;
                     background-color: #fff;
                     margin-bottom: 7px;
@@ -201,7 +194,7 @@ $fontsize: 12px;
                     text-decoration: none;
                     margin-bottom: 30px;
                     color: $footercolor;
-                    font-size: $fontsize;
+                    font-size: 10px;
                     font-family: $fontfam;
                     margin-left: 35%;
                 }
@@ -213,7 +206,7 @@ $fontsize: 12px;
                     text-decoration: none;
                     color: $footercolor;
                     font-family: $fontfam;
-                    font-size: $fontsize;
+                    font-size: 10px;
                     margin-bottom: 30px;
                 }
                 .footer__menu:hover{
@@ -225,7 +218,7 @@ $fontsize: 12px;
                    
                     color: $footercolor;
                     font-family: $fontfam;
-                    font-size: $fontsize;
+                    font-size: 10px;
                     margin-right: 40%;
                 }
                 .footer__faq:hover{
@@ -294,11 +287,11 @@ $fontsize: 12px;
             }
         }
     }
-@media  screen and(max-width: 500px) {
+@media  screen and(min-width: 1400px) {
   
     .footer_container{
       width: 100%;
-      height: 150px;
+      height: 200px;
       position: relative;
       background-color: #383838;
       display: flex;
@@ -308,7 +301,7 @@ $fontsize: 12px;
         height: 90%;
         width: 13%;
         position: absolute;
-        left: -100%;
+        left: -0%;
         bottom: 0%;
         z-index: 0;
       }
@@ -316,7 +309,7 @@ $fontsize: 12px;
         height: 90%;
         width: 14%;
         position: absolute;
-        right: -100%;
+        right: 0%;
         bottom: 0%;
         z-index: 0;
       }
@@ -329,8 +322,8 @@ $fontsize: 12px;
               font-size: 10px;
               z-index: 1;
               .panda{
-                  width: 65px;
-                  height: 65px;
+                  width: 90px;
+                  height: 90px;
                   border-radius: 50%;
                   background-color: #fff;
                   margin-bottom: 7px;
