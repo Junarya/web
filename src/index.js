@@ -7,6 +7,8 @@ import reportWebVitals from "./reportWebVitals";
 import "./grid.sass";
 import "./dasha_style.sass";
 import ScrollToTop from "./component/ScrollToTop";
+//import "./component/FAQ/faq.scss";
+//import "./component/Footer/Footer.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

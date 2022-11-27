@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import React from "react";
 import { Squash as Hamburger } from "hamburger-react";
+import { useEffect, useState } from "react";
 
 function Header(props) {
   const [isOpen, setOpen] = React.useState(false);
@@ -12,6 +13,16 @@ function Header(props) {
       behavior: "smooth"
     });
   };
+
+  useEffect(() => {
+    let slideInt = setInterval(() => {
+      console.log(window.location.pathname);
+    }, 1000);
+    return () => clearInterval(slideInt);
+  });
+  useEffect(() => {
+    window.location.pathname === "/" ? setOpenMenu(true) : setOpenMenu(false);
+  });
 
   return (
     <div className="header_background">
@@ -42,7 +53,10 @@ function Header(props) {
         <ul className="top_menu desktop">
           <li className="icon">
             <NavLink
-              onClick={() => setOpenMenu(true)}
+              onClick={() => {
+                setOpenMenu(true);
+                console.log(window.location.pathname);
+              }}
               className={({ isActive }) =>
                 isActive ? "PageActive" : "PageNotActive"
               }
@@ -90,7 +104,10 @@ function Header(props) {
           </li>
 
           <NavLink
-            onClick={() => setOpenMenu(false)}
+            onClick={() => {
+              setOpenMenu(false);
+              console.log(window.location.pathname);
+            }}
             to="/menu"
             className={({ isActive }) =>
               isActive ? "PageActive" : "PageNotActive"
@@ -104,7 +121,10 @@ function Header(props) {
             className={({ isActive }) =>
               isActive ? "PageActive" : "PageNotActive"
             }
-            onClick={() => setOpenMenu(false)}
+            onClick={() => {
+              setOpenMenu(false);
+              console.log(window.location.pathname);
+            }}
           >
             <li className="icon">{LinkNames[2]}</li>
           </NavLink>
