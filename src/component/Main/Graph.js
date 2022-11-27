@@ -7,7 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer,
+  ResponsiveContainer
 } from "recharts";
 
 function Graph(props) {
@@ -17,22 +17,22 @@ function Graph(props) {
       cafe: 1,
       staff: 3,
       drinks: 10,
-      cups: 1.5,
+      cups: 1.5
     },
     {
       name: "2021",
       cafe: 1,
       staff: 10,
       drinks: 20,
-      cups: 2.7,
+      cups: 2.7
     },
     {
       name: "2022",
       cafe: 2,
       staff: 15,
       drinks: 30,
-      cups: 4,
-    },
+      cups: 4
+    }
   ];
 
   return (
@@ -44,7 +44,7 @@ function Graph(props) {
         <Tooltip />
         <Legend wrapperStyle={{ fontWeight: "bold", fontSize: "1.3em" }} />
         <Line
-          name="Напитки"
+          name="Напитков в меню"
           type="monotone"
           dataKey="drinks"
           stroke="#e07b5a"

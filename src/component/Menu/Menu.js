@@ -1,7 +1,7 @@
 import Button from "./Button";
 import Carusel from "./Carusel";
 import PopUp from "./PopUp";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MenuCard from "./MenuCard";
 function Menu() {
   const [buttonIndex, setButtonIndex] = React.useState(0);
@@ -29,100 +29,129 @@ function Menu() {
     setMenuItems((prev) => prev.filter((menuItems) => menuItems.name !== name));
   };
 
+  const ScrollLock = () => {
+    const bodyStyle = document.body.style;
+
+    const [isLocked, setIsLocked] = useState(bodyStyle.overflowY === "hidden");
+
+    useEffect(() => {
+      bodyStyle.overflowY = isLocked ? "hidden" : "auto";
+    }, [isLocked, bodyStyle]);
+
+    const toggle = () => {
+      setIsLocked(!isLocked);
+    };
+    return [isLocked, toggle];
+  };
+
+  const [isLocked, toggle] = ScrollLock();
   return (
-    <div className="content">
-      <div className="carusel">
+    <div>
+      <div className="content carusel">
         <Carusel
           imgs={[
-            require("./menu/баннер.png"),
-            require("./menu/баннер.png"),
+            require("./menu/1.png"),
+            require("./menu/2.png"),
             require("./menu/3.png")
           ]}
         />
       </div>
-      <div className="titleOption">Опции</div>
-      <div className="itemOption">
-        <div className="optionFirstCol">
-          <div className="nameOption">Объем</div>
-          <div className="OptionCard">
-            <img
-              className="imgOption"
-              src={require("./menu/cup.png")}
-              alt="1.jpg"
-            ></img>
-            <div className="textOptions" style={{ paddingTop: "40px" }}>
-              500 мл / 100 мл
-            </div>
-          </div>
-          <div className="optionTemp">
-            <div className="nameOption">Температура</div>
-            <div className="OptionCard">
-              <img
-                className="imgOption"
-                src={require("./menu/temp.png")}
-                alt="1.jpg"
-              ></img>
-              <div className="textOptions">холодный / теплый / горячий</div>
-            </div>
-          </div>
+
+      <div className="background_menu">
+        <div className="titleOption">
+          <h1>ОПЦИИ</h1>
         </div>
-        <div className="optionSecondCol">
-          <div className="nameOption">Сладость</div>
-          <div className="OptionCard">
-            <img
-              className="imgOption"
-              src={require("./menu/lozka.png")}
-              alt="1.jpg"
-            ></img>
-            <div className="textOptions" style={{ paddingTop: "30px" }}>
-              0% / 25% / 50% / 75% / 100%
+        <div className="content itemOption">
+          <div className="container2">
+            <div className="optionFirstCol">
+              <div className="nameOption">Объем</div>
+              <div className="OptionCard">
+                <img
+                  className="imgOption"
+                  src={require("./menu/cup.png")}
+                  alt="1.jpg"
+                ></img>
+                <div className="textOptions">500 мл / 100 мл</div>
+              </div>
+              <div className="nameOption temp">Температура</div>
+              <div className="optionTemp">
+                <div className="OptionCard">
+                  <img
+                    className="imgOption"
+                    src={require("./menu/temp.png")}
+                    alt="1.jpg"
+                  ></img>
+                  <div className="textOptions">холодный / теплый / горячий</div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="optionTopping">
-            <div className="nameOption">Топпинг</div>
-            <div className="OptionCard">
-              <img
-                className="imgOption"
-                src={require("./menu/shar.png")}
-                alt="1.jpg"
-              ></img>
-              <div className="textOptions">
-                тапиока / тапиока-желе / пуддинг / сырная пенка
+            <div className="optionSecondCol">
+              <div className="nameOption">Сладость</div>
+              <div className="OptionCard">
+                <img
+                  className="imgOption"
+                  src={require("./menu/lozka.png")}
+                  alt="1.jpg"
+                ></img>
+                <div className="textOptions">0% / 25% / 50% / 75% / 100%</div>
+              </div>
+              <div className="nameOption topping">Топпинг</div>
+              <div className="optionTopping">
+                <div className="OptionCard">
+                  <img
+                    className="imgOption"
+                    src={require("./menu/shar.png")}
+                    alt="1.jpg"
+                  ></img>
+                  <div className="textOptions">
+                    тапиока / тапиока-желе / пуддинг / сырная пенка
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="optionThirdCol">
+              <div className="nameOption">Альтернативное молоко +40₽</div>
+              <div className="OptionCard">
+                <img
+                  className="imgOption"
+                  src={require("./menu/milk.png")}
+                  alt="1.jpg"
+                ></img>
+                <div className="textOptions">
+                  кокосовое / соевое / миндальное
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="optionThirdCol">
-          <div className="nameOption">Альтернативное молоко +40₽</div>
-          <div className="OptionCard">
-            <img
-              className="imgOption"
-              src={require("./menu/milk.png")}
-              alt="1.jpg"
-            ></img>
-            <div className="textOptions">кокосовое / соевое / миндальное</div>
-          </div>
-        </div>
       </div>
       <Button value={buttonIndex} onClickCategory={(i) => setButtonIndex(i)} />
-      <div className="line"></div>
+      <div className="container2 line"></div>
       <div className="menuUpper">
-        {cartOpened && (
-          <PopUp
-            items={menuItems}
-            onClose={() => setCartOpened(false)}
-            onRemove={onRemoveItem}
-          />
-        )}
-        <div className="cardAll">
-          {items.map((obj) => (
-            <MenuCard
-              key={obj.id}
-              {...obj}
-              onClickCard={(ob) => onAddToPopUp(obj)}
-              onClick1={() => setCartOpened(true)}
+        <div>
+          {cartOpened && (
+            <PopUp
+              items={menuItems}
+              onClose={() => {
+                setCartOpened(false);
+                toggle();
+              }}
+              onRemove={onRemoveItem}
             />
-          ))}
+          )}
+          <div className="cardAll">
+            {items.map((obj) => (
+              <MenuCard
+                key={obj.id}
+                {...obj}
+                onClickCard={(ob) => onAddToPopUp(obj)}
+                onClick1={() => {
+                  setCartOpened(true);
+                  toggle();
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

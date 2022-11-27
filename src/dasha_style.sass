@@ -389,7 +389,8 @@ li::marker
     .ingridients
         padding: 50px 0
     .video
-        width: 400px    
+        width: 400px 
+        position: relative   
     .stat_flex, .chart
         height: 400px   
     .chart
@@ -418,7 +419,21 @@ li::marker
 //500-1000
 @media screen and ( max-width: 1000px ) and (min-width: 500px)
     .Montserrat, .Montserrat_A
-        font-size: 10px
+        font-size: 12px
+    .font30
+        font-size: 16px
+    .border
+        text-align: center
+    .leaf
+        width: 70px
+    .headline 
+        margin: 50px auto
+    .my_imeem
+        margin: 28px 0
+    .list
+        margin-bottom: 35px
+    .adress2
+        margin-bottom: 50px
     .o_nas_inside, .stat_flex, .ingridients_flex
         flex-direction: column
     .o_nas_img
@@ -459,3 +474,52 @@ li::marker
         max-width: 1240px
     .content_dasha 
         padding-top: 86px
+    .background_menu
+        padding-top: 0
+
+@media screen and  (max-width: 1440px) 
+  h1
+    font-size: 40px
+
+.vid
+    border-radius: 50px
+    overflow: hidden
+    position: relative
+    height: 548px
+
+.video
+    width: 439px
+
+@media screen and  (max-width: 1440px) 
+  .vid
+    height: 439px
+    width: 351px
+  .video 
+    width: 351px
+
+.mobile
+    display: none
+.soc_link
+    align-items: center
+
+@media screen and  (max-width: 1000px) 
+    .vid
+        height: 439px
+        width: 351px
+    .video 
+        width: 351px
+        margin-top: 0px
+    .items
+        margin: 30px 0
+    .mobile
+        display: block
+        background: #fff
+
+    .desktop
+        display: none
+
+.no_scroll
+    height: 100vh
+    overflow: auto
+    width: 100vw
+

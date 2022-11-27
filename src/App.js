@@ -16,11 +16,7 @@ function App() {
   return (
     <div /*classNameName="wrapper"*/>
       <ScrollToTopBtn />
-      <Header
-        refProp1={myRef}
-        refProp2={myRef2}
-        refProp3={myRef3}
-      />
+      <Header refProp1={myRef} refProp2={myRef2} refProp3={myRef3} />
       <Routes>
         {/*  Ссылки на другие страницы */}
         <Route

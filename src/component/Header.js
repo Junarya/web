@@ -1,22 +1,23 @@
 import { Link, NavLink } from "react-router-dom";
 import React from "react";
+import { Squash as Hamburger } from "hamburger-react";
 
 function Header(props) {
-  const LinkNames = ["Главная", "Меню", "О нас"];
-  const [activePage, setActivePage] = React.useState(0);
-  const onClickHeader = (index) => {
-    setActivePage(index);
-  };
+  const [isOpen, setOpen] = React.useState(false);
+  const [menuOpen, setOpenMenu] = React.useState(true);
+  const LinkNames = ["ГЛАВНАЯ", "МЕНЮ", "FAQ"];
   const scrollDown = (ref) => {
     window.scrollTo({
-      top: ref.current.offsetTop - 110,
+      top: ref.current?.offsetTop - 80,
       behavior: "smooth"
     });
   };
+
   return (
     <div className="header_background">
       <header className="container">
         <NavLink
+          onClick={() => setOpenMenu(true)}
           className={({ isActive }) =>
             isActive ? "PageActive" : "PageNotActive"
           }
@@ -38,9 +39,10 @@ function Header(props) {
             />
           </div>
         </NavLink>
-        <ul className="top_menu">
+        <ul className="top_menu desktop">
           <li className="icon">
             <NavLink
+              onClick={() => setOpenMenu(true)}
               className={({ isActive }) =>
                 isActive ? "PageActive" : "PageNotActive"
               }
@@ -48,41 +50,47 @@ function Header(props) {
               end
             >
               {LinkNames[0]}
-
-              <div className="icon_down">
-                <i class="fa-solid fa-chevron-down "></i>
-              </div>
+              {menuOpen && (
+                <div className="icon_down">
+                  <i class="fa-solid fa-chevron-down "></i>
+                </div>
+              )}
             </NavLink>
-
-            <ul className="inner_menu">
-              <li>
-                <Link
-                  className="menu_link"
-                  onClick={() => scrollDown(props.refProp1)}
-                >
-                  О нас
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="menu_link"
-                  onClick={() => scrollDown(props.refProp2)}
-                >
-                  Напитки
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="menu_link"
-                  onClick={() => scrollDown(props.refProp3)}
-                >
-                  Контакты
-                </Link>
-              </li>
-            </ul>
+            {menuOpen && (
+              <ul className="inner_menu" id="kek">
+                <li>
+                  <Link
+                    className="menu_link"
+                    to="/"
+                    onClick={() => scrollDown(props.refProp1)}
+                  >
+                    О НАС
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="menu_link"
+                    onClick={() => scrollDown(props.refProp2)}
+                    to="/"
+                  >
+                    НАПИТКИ
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="menu_link"
+                    onClick={() => scrollDown(props.refProp3)}
+                    to="/"
+                  >
+                    КОНТАКТЫ
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
 
           <NavLink
+            onClick={() => setOpenMenu(false)}
             to="/menu"
             className={({ isActive }) =>
               isActive ? "PageActive" : "PageNotActive"
@@ -96,10 +104,88 @@ function Header(props) {
             className={({ isActive }) =>
               isActive ? "PageActive" : "PageNotActive"
             }
+            onClick={() => setOpenMenu(false)}
           >
             <li className="icon">{LinkNames[2]}</li>
           </NavLink>
         </ul>
+        <div className="mobile">
+          <div className="burger" onClick={() => console.log("click")}>
+            <Hamburger color="#000" toggled={isOpen} toggle={setOpen} />
+          </div>
+          {isOpen && (
+            <ul className="top_menu ">
+              <li className="icon">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "PageActive" : "PageNotActive"
+                  }
+                  to="/"
+                  end
+                  onClick={() => setOpen(false)}
+                >
+                  {LinkNames[0]}
+
+                  <div className="icon_down">
+                    <i class="fa-solid fa-chevron-down "></i>
+                  </div>
+                </NavLink>
+
+                <ul className="inner_menu" id="kek">
+                  <li>
+                    <Link
+                      className="menu_link"
+                      to="/"
+                      onClick={() => scrollDown(props.refProp1)}
+                    >
+                      О нас
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="menu_link"
+                      onClick={() => scrollDown(props.refProp2)}
+                      to="/"
+                    >
+                      Напитки
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="menu_link"
+                      onClick={() => scrollDown(props.refProp3)}
+                      to="/"
+                    >
+                      Контакты
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="icon">
+                <NavLink
+                  onClick={() => setOpen(false)}
+                  to="/menu"
+                  className={({ isActive }) =>
+                    isActive ? "PageActive" : "PageNotActive"
+                  }
+                >
+                  {LinkNames[1]}
+                </NavLink>
+              </li>
+              <li className="icon">
+                <NavLink
+                  onClick={() => setOpen(false)}
+                  to="/faq"
+                  className={({ isActive }) =>
+                    isActive ? "PageActive" : "PageNotActive"
+                  }
+                >
+                  {LinkNames[2]}
+                </NavLink>
+              </li>
+            </ul>
+          )}
+        </div>
       </header>
     </div>
   );

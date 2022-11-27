@@ -77,6 +77,13 @@ body {
   height: 110px;
 }
 
+.background_menu {
+  background-image: url("./component/img/menu_background.png");
+  background-repeat: no-repeat;
+  padding: 40px 0;
+  background-position: center;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -134,23 +141,16 @@ header .icon_down {
 }
 
 .content {
-  padding: 150px 0;
   margin: auto;
   max-width: 1380px;
-  background-color: #FFFFFF;
 }
 .content h1 {
   margin: 0;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .content {
-    padding: 20px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .content {
-    padding: 40px 0px;
+    max-width: 1000px;
   }
 }
 .menuCardUpper {
@@ -173,18 +173,20 @@ header .icon_down {
   padding: 20px;
   max-width: 325px;
   max-height: 454px;
-  margin-bottom: 36px;
+  margin: 13px;
   border-radius: 30px;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .card {
-    margin-top: 36px;
-    max-width: 280px;
+    margin: 13px;
+    max-width: 260px;
     max-height: 350px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   .card img {
     max-width: 260px;
@@ -201,10 +203,11 @@ header .icon_down {
   min-height: 70px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .nameCard {
     font-size: 22px;
     padding-bottom: 5px;
+    max-width: 260px;
   }
 }
 .vCard {
@@ -212,7 +215,7 @@ header .icon_down {
   padding-bottom: 15px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .vCard {
     padding-bottom: 15px;
   }
@@ -236,10 +239,11 @@ header .icon_down {
   transition: 0.5s;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .infoCard {
     width: 260px;
-    height: 50px;
+    height: 58px;
+    border-radius: 22px;
   }
 }
 .CardPrice {
@@ -250,13 +254,14 @@ header .icon_down {
   font-weight: bold;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .CardPrice {
     font-size: 20px;
+    padding-top: 17px;
   }
 }
 .infoCard:hover {
-  background-color: #a57763;
+  background-color: #cca594;
 }
 
 .button, .btn {
@@ -296,7 +301,7 @@ header .icon_down {
   border-radius: 88px;
   margin-bottom: 100px;
   font-family: "Montserrat Alternates", sans-serif;
-  padding-right: 10px;
+  padding: 20px;
 }
 
 .nameOption {
@@ -307,7 +312,6 @@ header .icon_down {
 .textOptions {
   font-size: 20px;
   display: block;
-  padding-top: 20px;
 }
 
 .optionFirstCol, .optionSecondCol {
@@ -326,14 +330,6 @@ header .icon_down {
   margin-right: 103px;
 }
 
-.optionTemp {
-  margin-top: 31px;
-}
-
-.optionTopping {
-  margin-top: 55px;
-}
-
 .optionThirdCol {
   width: 243px;
   padding-right: 94px;
@@ -344,21 +340,20 @@ header .icon_down {
 
 .OptionCard {
   display: inline-flex;
+  margin-top: 16px;
+  align-items: center;
+  min-height: 72px;
 }
 
 .imgOption {
-  padding-top: 16px;
-  padding-right: 24px;
+  margin-right: 24px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .titleOption {
     font-size: 40px;
-    width: 206px;
-    height: 55px;
-  }
-  .optionFirstCol {
-    margin-left: -20px;
+    width: 176px;
+    height: 49px;
   }
   .optionThirdCol {
     max-width: 243px;
@@ -369,15 +364,18 @@ header .icon_down {
     margin-left: -50px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1440px) {
   .itemOption {
     border-radius: 0px;
+    padding: 20px 0;
+    max-width: 1440px;
+    max-width: 1440px;
   }
   .titleOption {
     font-size: 40px;
   }
   .nameOption {
-    font-size: 20px;
+    font-size: 24px;
   }
   .textOptions {
     font-size: 16px;
@@ -421,29 +419,28 @@ header .icon_down {
   border-radius: 30px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .drawer {
-    margin: 30px;
     margin-top: 110px;
+    max-width: 970px;
   }
   .drawer img {
-    width: 500px;
+    width: 430px;
     height: 400px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   .drawer {
     border-radius: 48px;
-    margin: 5px;
+    margin: auto;
     margin-top: 15px;
-    max-width: 400px;
+    max-width: 485px;
     max-height: 912px;
+    padding: 50px 0px;
   }
   .drawer img {
-    width: auto;
-    height: auto;
-    margin: 0px;
-    margin-top: -30px;
+    width: 425px;
+    height: 382px;
   }
 }
 .overlay {
@@ -462,12 +459,15 @@ header .icon_down {
   margin: 100px 100px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .cartItems {
-    margin: 50px 70px;
+    margin: 30px;
+    justify-content: normal;
+    margin-top: 80px;
+    margin-bottom: 80px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   .cartItems {
     flex-direction: column;
   }
@@ -477,25 +477,17 @@ header .icon_down {
   margin: 0 65px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .textPopUp {
     max-width: 415px;
-    margin: 0 50px;
+    margin: 0;
+    margin-left: 35px;
   }
 }
 @media screen and (max-width: 1000px) {
   .textPopUp {
     max-width: 552px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .textPopUp {
-    max-width: 415px;
-    margin: 0;
-    margin-right: -45px;
-    margin-left: -45px;
-    margin-bottom: -30px;
-    margin-top: 10px;
+    margin: auto;
   }
 }
 .btnPopUpClose {
@@ -512,16 +504,16 @@ header .icon_down {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .btnPopUpClose {
     margin-top: -50px;
+    margin-left: -30px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   .btnPopUpClose {
     position: absolute;
-    margin-left: 280px;
-    margin-top: -40px;
+    margin-left: 382px;
   }
 }
 .btnPopUpClose:hover {
@@ -533,22 +525,16 @@ header .icon_down {
   margin-bottom: 36px;
 }
 
-@media screen and (max-width: 1500px) {
-  .PopUpName {
-    font-size: 28px;
-    margin-bottom: 26px;
-  }
-}
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1440px) {
   .PopUpName {
     font-size: 24px;
     margin-bottom: 25px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   .PopUpName {
     font-size: 22px;
-    margin-bottom: 25px;
+    margin: 25px 0;
   }
 }
 .PopUpMl {
@@ -556,19 +542,13 @@ header .icon_down {
   margin-bottom: 18px;
 }
 
+@media screen and (max-width: 1440px) {
+  .PopUpMl {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+}
 @media screen and (max-width: 1000px) {
-  .PopUpMl {
-    font-size: 14px;
-    margin-bottom: 12px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .PopUpMl {
-    font-size: 14px;
-    margin-bottom: 12px;
-  }
-}
-@media screen and (max-width: 500px) {
   .PopUpMl {
     font-size: 14px;
     margin-bottom: 10px;
@@ -581,19 +561,13 @@ header .icon_down {
   margin-bottom: 46px;
 }
 
-@media screen and (max-width: 1500px) {
-  .PopUpPrice {
-    font-size: 20px;
-    margin-bottom: 36px;
-  }
-}
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1440px) {
   .PopUpPrice {
     font-size: 20px;
     margin-bottom: 24px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   .PopUpPrice {
     font-size: 20px;
     margin-bottom: 18px;
@@ -604,21 +578,15 @@ header .icon_down {
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 1500px) {
-  .PopUpInfa {
-    font-size: 20px;
-    margin-bottom: 40px;
-  }
-}
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1440px) {
   .PopUpInfa {
     font-size: 16px;
     margin-bottom: 34px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   .PopUpInfa {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 25px;
   }
 }
@@ -626,14 +594,14 @@ header .icon_down {
   font-size: 24px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .PopUpSostav {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 1000px) {
   .PopUpSostav {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 .btnMenu, .btnMenuActive {
@@ -652,14 +620,7 @@ header .icon_down {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1500px) {
-  .btnMenu, .btnMenuActive {
-    font-size: 27px;
-    padding: 15px 23px;
-    margin-left: 18px;
-  }
-}
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1440px) {
   .btnMenu, .btnMenuActive {
     font-size: 20px;
     padding: 15px 15px;
@@ -680,14 +641,14 @@ header .icon_down {
 
 .line {
   content: "";
-  margin-left: -18px;
+  margin-left: 15%;
   display: block;
-  width: 100%;
+  width: 1440px;
   height: 3px;
   background-color: #000000;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .line {
     margin-left: 0px;
   }
@@ -705,24 +666,21 @@ header .icon_down {
   margin-top: 65px;
   max-width: 1380px;
   margin: auto;
-  padding: 30px;
-  justify-content: space-between;
+  padding: 30px 0;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .cardAll {
-    padding: 40px;
+    max-width: 980px;
   }
 }
 @media screen and (max-width: 1000px) {
   .cardAll {
     padding: 0px;
-    min-width: 100%;
   }
 }
 .slider {
-  max-height: 455px;
-  max-width: 1360px;
+  margin-top: 150px;
   display: flex;
   align-items: center;
 }
@@ -730,7 +688,7 @@ header .icon_down {
   min-width: 100%;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .slider img {
     min-width: 100%;
   }
@@ -746,25 +704,108 @@ header .icon_down {
   display: flex;
   width: 100%;
 }
-.ItemSlider img {
-  width: 1360px;
-}
 
 .ArrowSlider {
   cursor: pointer;
   font-size: 30px;
-  height: 44px;
-  width: 27px;
-  color: rgb(165, 147, 147);
+  color: #695b5b;
 }
 
-.SliderArLeft {
+.burger {
   position: absolute;
-  margin-left: 16px;
+  right: 5%;
+  top: 19px;
 }
 
-.SliderArRight {
-  margin-left: -50px;
+.mobile ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 86px;
+  right: 0;
+  width: 100%;
+  background: #f4eee8;
+}
+.mobile ul li {
+  padding: 20px;
+  padding-left: 15%;
+}
+.mobile ul a li {
+  padding: 20px;
+  padding-left: 15%;
+}
+
+.mobile .top_menu {
+  border-top: 2px solid #7a6c6c;
+  box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.2);
+}
+.mobile .top_menu > li:hover > ul li {
+  height: 40px;
+}
+
+.mobile .top_menu > li > a {
+  text-decoration: none;
+}
+.mobile .top_menu {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.mobile .inner_menu {
+  position: unset;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  margin: 0;
+}
+.mobile .top_menu > li > ul a {
+  opacity: 1;
+  height: 30px;
+  padding: 10px;
+  transition: none;
+}
+.mobile .top_menu > li > ul li {
+  height: 40px;
+  opacity: 1;
+}
+.mobile .inner_menu > li {
+  height: 0;
+  opacity: 1;
+  transition: none;
+  display: block;
+  margin: 0;
+}
+.mobile .inner_menu > li > a {
+  width: 100%;
+  text-decoration: none;
+  overflow: hidden;
+  opacity: 1;
+  transition: none;
+}
+.mobile .top_menu > li > ul a {
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  transition: none;
+}
+.mobile ul li ul {
+  display: block;
+}
+.mobile ul li ul li {
+  padding: 0;
+}
+.mobile ul li ul .menu_link {
+  border-top: none;
+  box-shadow: none;
+}
+
+.mobile ul .inner_menu {
+  display: none;
+}
+.mobile .icon_down {
+  display: none;
 }
 
 .titleMenu {
@@ -796,4 +837,132 @@ header .icon_down {
   height: 61px;
   background-color: #D4D8B8;
   margin-bottom: 36px;
+}
+
+.SliderArLeft {
+  position: absolute;
+  margin-left: 16px;
+}
+
+.SliderArRight {
+  margin-left: -3%;
+}
+
+.container2 {
+  margin: auto;
+  max-width: 1400px;
+}
+
+.temp {
+  margin-top: 31px;
+}
+
+.topping {
+  margin-top: 31px;
+}
+
+@media screen and (max-width: 1440px) {
+  .container2 {
+    max-width: 978px;
+  }
+  .slider {
+    margin-top: 112px;
+  }
+  .SliderArRight {
+    margin-left: -4%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .line {
+    margin-left: 0px;
+    max-width: 480px;
+  }
+  .container2 {
+    max-width: 480px;
+    margin: auto;
+  }
+  .btnMenu {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 12px;
+    padding: 11px 8px;
+  }
+  .btnMenuActive {
+    margin: 0;
+    font-size: 12px;
+    padding: 11px 8px;
+  }
+  .SliderArRight {
+    margin-left: -6%;
+  }
+  .slider {
+    margin-top: 112px;
+  }
+  .textOptions {
+    font-size: 12px;
+  }
+  .nameOption {
+    font-size: 16px;
+  }
+  .optionFirstCol {
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .optionSecondCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 40px;
+  }
+  .itemOption {
+    height: 800px;
+    margin-bottom: 40px;
+  }
+  .OptionCard {
+    flex-direction: column;
+  }
+  .imgOption {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .optionThirdCol {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 274px;
+    width: 274px;
+    padding-left: 100px;
+  }
+  .SliderArLeft {
+    margin-left: 2%;
+  }
+  .card {
+    max-width: 197px;
+    max-height: 325px;
+    padding: 20px 15px;
+    margin: 7px;
+  }
+  .card img {
+    max-width: 195px;
+    max-height: 140px;
+  }
+  .nameCard {
+    max-width: 200px;
+    font-size: 16px;
+    min-height: 48px;
+  }
+  .vCard {
+    max-width: 200px;
+    font-size: 12px;
+  }
+  .infoCard {
+    max-width: 200px;
+  }
+  .cardAll {
+    padding-top: 25px;
+    max-width: 483px;
+  }
 }/*# sourceMappingURL=index.css.map */
