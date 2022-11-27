@@ -5,7 +5,7 @@ import { Squash as Hamburger } from "hamburger-react";
 function Header(props) {
   const [isOpen, setOpen] = React.useState(false);
   const [menuOpen, setOpenMenu] = React.useState(true);
-  const LinkNames = ["Главная", "Меню", "О нас"];
+  const LinkNames = ["ГЛАВНАЯ", "МЕНЮ", "FAQ"];
   const scrollDown = (ref) => {
     window.scrollTo({
       top: ref.current?.offsetTop - 80,
@@ -64,7 +64,7 @@ function Header(props) {
                     to="/"
                     onClick={() => scrollDown(props.refProp1)}
                   >
-                    О нас
+                    О НАС
                   </Link>
                 </li>
                 <li>
@@ -73,7 +73,7 @@ function Header(props) {
                     onClick={() => scrollDown(props.refProp2)}
                     to="/"
                   >
-                    Напитки
+                    НАПИТКИ
                   </Link>
                 </li>
                 <li>
@@ -82,7 +82,7 @@ function Header(props) {
                     onClick={() => scrollDown(props.refProp3)}
                     to="/"
                   >
-                    Контакты
+                    КОНТАКТЫ
                   </Link>
                 </li>
               </ul>

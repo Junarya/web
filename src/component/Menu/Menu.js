@@ -1,7 +1,7 @@
 import Button from "./Button";
 import Carusel from "./Carusel";
 import PopUp from "./PopUp";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MenuCard from "./MenuCard";
 function Menu() {
   const [buttonIndex, setButtonIndex] = React.useState(0);
@@ -29,12 +29,28 @@ function Menu() {
     setMenuItems((prev) => prev.filter((menuItems) => menuItems.name !== name));
   };
 
+  const ScrollLock = () => {
+    const bodyStyle = document.body.style;
+
+    const [isLocked, setIsLocked] = useState(bodyStyle.overflowY === "hidden");
+
+    useEffect(() => {
+      bodyStyle.overflowY = isLocked ? "hidden" : "auto";
+    }, [isLocked, bodyStyle]);
+
+    const toggle = () => {
+      setIsLocked(!isLocked);
+    };
+    return [isLocked, toggle];
+  };
+
+  const [isLocked, toggle] = ScrollLock();
   return (
     <div>
       <div className="content carusel">
         <Carusel
           imgs={[
-            require("./menu/баннер.png"),
+            require("./menu/1.png"),
             require("./menu/2.png"),
             require("./menu/3.png")
           ]}
@@ -116,7 +132,10 @@ function Menu() {
           {cartOpened && (
             <PopUp
               items={menuItems}
-              onClose={() => setCartOpened(false)}
+              onClose={() => {
+                setCartOpened(false);
+                toggle();
+              }}
               onRemove={onRemoveItem}
             />
           )}
@@ -126,7 +145,10 @@ function Menu() {
                 key={obj.id}
                 {...obj}
                 onClickCard={(ob) => onAddToPopUp(obj)}
-                onClick1={() => setCartOpened(true)}
+                onClick1={() => {
+                  setCartOpened(true);
+                  toggle();
+                }}
               />
             ))}
           </div>

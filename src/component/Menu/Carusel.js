@@ -25,12 +25,12 @@ export const Carusel = ({ imgs }) => {
     setIndex(0);
   }, []);
 
-  /* useEffect(() => {
+  useEffect(() => {
     let slideInt = setInterval(() => {
       hadleLeftArrow();
-    }, 3000);
+    }, 5000);
     return () => clearInterval(slideInt);
-  }); */
+  });
 
   return (
     <div className="slider">
