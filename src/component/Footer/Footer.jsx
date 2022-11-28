@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Footer.scss";
 import Panda from "./panda.svg";
 import Vector from "./Vector.svg";
@@ -8,7 +8,7 @@ import Vector1 from "./Vector1.svg";
 function Footer() {
   return (
     <div className="footer_container">
-      <img className="left_leaf" src={Vector}></img>
+      <img className="left_leaf" src={Vector} alt="1" ></img>
       <div className="box">
         <div className="leftContainer">
           <img className="panda" src={Panda} alt="1" />

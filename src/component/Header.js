@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import React from "react";
 import { Squash as Hamburger } from "hamburger-react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function Header(props) {
   const [isOpen, setOpen] = React.useState(false);
@@ -10,7 +10,7 @@ function Header(props) {
   const scrollDown = (ref) => {
     window.scrollTo({
       top: ref.current?.offsetTop - 80,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
@@ -22,7 +22,7 @@ function Header(props) {
   });
   useEffect(() => {
     window.location.pathname === "/" ? setOpenMenu(true) : setOpenMenu(false);
-  });
+  }, []);
 
   return (
     <div className="header_background">

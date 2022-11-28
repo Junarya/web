@@ -64,13 +64,13 @@
 .plus {
   font-size: 70px;
   transition: all 0.5s ease 0s;
-  margin-right: 2%;
+
   color: #f4ddd3;
 }
 .plus_active {
   font-size: 70px;
   transform: rotate(45deg);
-  margin-right: 2%;
+
   transition: all 0.5s ease 0s;
   color: #f4ddd3;
 }
@@ -79,10 +79,10 @@
   display: flex;
   height: 250px;
   margin-top: 110px;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
 }
 .div_faq {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,18 +123,16 @@
 }
 
 @media screen and(max-width: 1440px) {
-  .wraper {
-    display: flex;
-    height: 100wh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-    //margin-bottom: 40px;
+  .faqText {
+    font-size: 20px;
   }
+  .circle {
+    width: 50px;
+    height: 50px;}
+
   .accordion {
-    width: 60%;
-    min-width: 600px;
+    width: 960px;
+    margin: auto;
   }
   .item {
     background-color: white;
@@ -148,12 +146,12 @@
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
     padding-left: 2%;
-    height: 90px;
-    font-size: 30px;
+    height: 70px;
+    font-size: 26px;
   }
   .tittle:hover {
-    height: 100px;
-    background-color: #977d71;
+    height: 70px;
+    background-color: #cca594;
   }
   .faq_content {
     max-height: 0px;
@@ -177,18 +175,18 @@
   .plus {
     font-size: 70px;
     transition: all 0.5s ease 0s;
-    margin-right: 2%;
+
   }
   .plus_active {
-    font-size: 40px;
+    font-size: 70px;
     transform: rotate(45deg);
-    margin-right: 2%;
     transition: all 0.5s ease 0s;
   }
   .upperSide {
     width: 100%;
     display: flex;
-    height: 250px;
+    height: auto;
+    margin-top: 0;
   }
   .div_faq {
     margin: 0 auto;
@@ -199,7 +197,7 @@
   }
   .written_rectangle {
     width: 130px;
-    height: 105px;
+
     margin-bottom: 40px;
     //margin-left: 20%;
     background-color: #d4d8b8;
@@ -213,20 +211,14 @@
   .written {
     font-weight: 700;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 22px;
     //padding-left: 10%;
   }
   .rightleaf {
-    position: absolute;
-    right: 0%;
-    top: 5%;
-    width: 400px;
+    width: 262px;
   }
   .leftleaf {
-    position: absolute;
-    left: 0%;
-    top: 5%;
-    width: 400px;
+    width: 262px;
   }
 }
 
@@ -235,13 +227,12 @@
     max-width: 1380px;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 40px;
     margin: auto;
   }
   .accordion {
     width: 90%;
-    min-width: 100px;
-    margin-left: 0%;
+
   }
   .item {
     background-color: white;
@@ -280,13 +271,12 @@
   .plus {
     font-size: 40px;
     transition: all 0.5s ease 0s;
-    margin-right: 2%;
+
     color: #f4ddd3;
   }
   .plus_active {
     font-size: 40px;
     transform: rotate(45deg);
-    margin-right: 2%;
     transition: all 0.5s ease 0s;
     color: #f4ddd3;
   }
@@ -294,6 +284,7 @@
     width: 100%;
     display: flex;
     height: 200px;
+    margin-top: 86px;
   }
   .div_faq {
     margin: 0 auto;
@@ -305,14 +296,14 @@
   }
   .written_rectangle {
     width: 100px;
-    height: 70px;
+    height: 48px;
     margin-bottom: 40px;
     //margin-left: 10%;
     background-color: #d4d8b8;
-    margin-top: 130px;
+    margin-top: 0;
     .written_faq {
       font-family: "Russo One", arial;
-      font-size: 45px;
+      font-size: 40px;
       text-align: center;
     }
   }
@@ -320,17 +311,15 @@
     font-weight: 700;
     margin: 0 auto;
     //padding-left: 10%;
+    font-size: 20px;
+    text-align: center;
+
   }
   .rightleaf {
-    position: absolute;
-    right: -15%;
-    top: 10%;
-    width: 230px;
+width: 150px;
+
   }
   .leftleaf {
-    position: absolute;
-    left: -15%;
-    top: 10%;
-    width: 230px;
+    width: 150px;
   }
 }
