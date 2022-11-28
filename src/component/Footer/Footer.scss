@@ -32,8 +32,8 @@ $fontsize: 22px;
     z-index: 1;
     align-items: center;
     .panda {
-      width: 65px;
-      height: 65px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       background-color: #fff;
       margin-bottom: 7px;
@@ -155,18 +155,17 @@ $fontsize: 22px;
       color: $footercolor;
       padding-top: 15px;
       font-family: $fontfam;
-      font-size: 10px;
+      font-size: 15px;
       z-index: 1;
       .panda {
-        width: 90px;
-        height: 90px;
+        width: 65px;
+        height: 65px;
         border-radius: 50%;
         background-color: #fff;
         margin-bottom: 7px;
       }
     }
     .midContainer {
-
       .footer__main {
         text-decoration: none;
         margin-bottom: 0;
@@ -203,11 +202,13 @@ $fontsize: 22px;
         filter: brightness(2);
       }
     }
-
   }
 }
 
 @media screen and(max-width: 1000px ) {
+  .box {
+    margin: 0 10px;
+  }
   .footer_container {
     width: 100%;
     height: 150px;
@@ -218,20 +219,12 @@ $fontsize: 22px;
 
     align-items: center;
     .left_leaf {
-      height: 90%;
-      width: 13%;
-  
-      left: -100%;
-      bottom: 0%;
-      z-index: 0;
+      height: 95%;
+      width: 20%;
     }
     .right_leaf {
-      height: 90%;
-      width: 14%;
-
-      right: -100%;
-      bottom: 0%;
-      z-index: 0;
+      height: 95%;
+      width: 20%;
     }
     .leftContainer {
       display: flex;
@@ -239,8 +232,10 @@ $fontsize: 22px;
       color: $footercolor;
       padding-top: 15px;
       font-family: $fontfam;
-      font-size: 8px;
+      font-size: 15px;
       z-index: 1;
+      max-width: 85px;
+      text-align: center;
       .panda {
         width: 50px;
         height: 50px;
@@ -257,11 +252,10 @@ $fontsize: 22px;
       color: $footercolor;
       .footer__main {
         text-decoration: none;
-        margin-bottom: 30px;
         color: $footercolor;
-        font-size: 10px;
+        font-size: 12px;
         font-family: $fontfam;
-        margin-left: 35%;
+        margin: 0;
       }
       .footer__main:hover {
         text-decoration: underline;
@@ -271,8 +265,8 @@ $fontsize: 22px;
         text-decoration: none;
         color: $footercolor;
         font-family: $fontfam;
-        font-size: 10px;
-        margin-bottom: 30px;
+        font-size: 12px;
+        margin: 0;
       }
       .footer__menu:hover {
         text-decoration: underline;
@@ -283,8 +277,8 @@ $fontsize: 22px;
 
         color: $footercolor;
         font-family: $fontfam;
-        font-size: 10px;
-        margin-right: 40%;
+        font-size: 12px;
+        margin: 0;
       }
       .footer__faq:hover {
         text-decoration: underline;
@@ -344,8 +338,9 @@ $fontsize: 22px;
         height: 48px;
         background: url("css_sprites.png") -78px -100px;
       }
-      .tg {
-        margin: 10px;
+      .tg,
+      .vk {
+        margin: 5px 0;
       }
     }
   }

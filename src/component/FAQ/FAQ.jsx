@@ -30,7 +30,7 @@ function FAQ() {
           {Data.map((item, i) => (
             <div className="item">
               <div className="tittle" onClick={() => togle(i)}>
-                <div>{item.question}</div>
+                <div className="tittle_width">{item.question}</div>
                 <div className="circle">
                   <p className={selected == i ? "plus_active" : "plus"}>+</p>
                 </div>
