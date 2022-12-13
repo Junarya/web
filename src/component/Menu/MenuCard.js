@@ -12,7 +12,7 @@ function MenuCard(props) {
       <img className="imgCard" src={props.imageUrl} alt="1.jpg"></img>
       <div className="nameCard">{props.name}</div>
       <div className="infoMenuUpper">
-        <div className="vCard"> 500 мл/700 мл </div>
+        <div className="vCard"> 500 мл / 700 мл </div>
         <div className="infoCard">
           <div className="CardPrice">
             {props.price1}

@@ -9,7 +9,7 @@ function PopUp({ onClose, onRemove, items = [] }) {
             </div>
             <div className="textPopUp">
               <div className="PopUpName"> {obj.name}</div>
-              <div className="PopUpMl">500 мл/700 мл</div>
+              <div className="PopUpMl">500 мл / 700 мл</div>
               <div className="PopUpPrice">
                 {obj.price1}
                 <i class="fa-solid fa-ruble-sign" /> / {obj.price2}

@@ -71,7 +71,7 @@ function Menu() {
                   src={require("./menu/cup.png")}
                   alt="1.jpg"
                 ></img>
-                <div className="textOptions">500 мл / 100 мл</div>
+                <div className="textOptions">500 мл / 700 мл</div>
               </div>
               <div className="nameOption temp">Температура</div>
               <div className="optionTemp">
